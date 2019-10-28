@@ -1,0 +1,94 @@
+<div data-c-grid-item="base(1of1)">
+    <span id="consent"></span>
+    <h2 data-gc-section-status="complete" data-c-margin="top(triple) bottom(normal)"><i class="material-icons">error</i><i class="material-icons">warning</i><i class="material-icons">check_circle</i>Consent and Verification</h2>
+    <hr data-c-margin="tb(double)">
+    <ul data-c-margin="bottom(normal)">
+        <li>Verification of identity and background</li>
+        <li>Verification of educational and professional credentials</li>
+        <li>Verifications of personal and professional references</li>
+        <li>Law enforcement inquiry (criminal record check)</li>
+        <li>Financial inquiry (credit check)</li>
+    </ul>
+</div>
+<div data-c-input="radio" data-c-grid-item="base(1of1)">
+    <label for="RG2">Please confirm your age:</label>
+    <span>Required</span>
+    <div id="RG2" role="radiogroup">
+        <label for="rB1" data-gc-parent-guardian-consent-trigger>
+            <input id="rB1" required name="radioB" type="radio" />
+            <span>I am under 18 years of age.</span>
+        </label>
+        <label for="rB2" data-gc-personal-consent-trigger>
+            <input id="rB2" required name="radioB" type="radio" />
+            <span>I am 18 years or older.</span>
+        </label>
+    </div>
+    <span>This input has an error.</span>
+</div>
+{# Personal Consent #}
+<div data-gc-personal-consent data-c-input="checkbox" class="hidden" data-c-grid-item="base(1of1)">
+    <label>Please provide your consent:</label>
+    <span>Required</span>
+    <div>
+        <label for="adultConsent">
+            <input
+                id="adultConsent"
+                type="checkbox"
+                required/>
+            <span>I consent to have the tests outlined above perfomed</span>
+        </label>
+    </div>
+    <span>This input has an error.</span>
+</div>
+{# Parental/Guardian Consent #}
+<div data-gc-parent-guardian-consent class="hidden" data-c-grid-item="base(1of1)">
+    <div data-c-grid="gutter">
+        <div data-c-grid-item="base(1of1)">
+            <p data-c-margin="bottom(normal)">You may give your consent only if you have reached the age of 18. As you are under 18, your parent or guardian must give consent.</p>
+        </div>
+        <div data-c-input="text" data-c-grid-item="tl(2of3)">
+            <label for="TI2">Applicant's Name</label>
+            <span>Required</span>
+            <div>
+                <input id="TI2" placeholder="e.g. Clark Kent" required type="text" />
+            </div>
+            <span>This input has an error.</span>
+        </div>
+        <div data-c-input="checkbox" data-c-grid-item="base(1of3)">
+            <label>Please provide your consent:</label>
+            <span>Required</span>
+            <div>
+                <label for="youthConsent">
+                    <input
+                        id="youthConsent"
+                        type="checkbox"
+                        required/>
+                    <span>I consent</span>
+                </label>
+            </div>
+            <span>This input has an error.</span>
+        </div>
+        <div data-c-input="text" data-c-grid-item="tl(2of3)">
+            <label for="TI2">Parent/Guardian's Name</label>
+            <span>Required</span>
+            <div>
+                <input id="TI2" placeholder="e.g. Clark Kent" required type="text" />
+            </div>
+            <span>This input has an error.</span>
+        </div>
+        <div data-c-input="checkbox" data-c-grid-item="base(1of3)">
+            <label>Please provide your consent:</label>
+            <span>Required</span>
+            <div>
+                <label for="parentConsent">
+                    <input
+                        id="parentConsent"
+                        type="checkbox"
+                        required/>
+                    <span>I consent</span>
+                </label>
+            </div>
+            <span>This input has an error.</span>
+        </div>
+    </div>
+</div>

@@ -13,7 +13,7 @@
 // URL Subdirectory ============================================================
 // This variable is designed to allow for proper relative links when publishing to a subdirectory or Github Pages. If you plan on publishing to Github Pages, set this variable to the name of your repository.
 
-let urlPrefix = "";
+let urlPrefix = "tc-reliability";
 
 // If this variable is used, it's important to leverage the $ROOT variable in your Twig files to ensure your assets and application links work properly when deployed.
 

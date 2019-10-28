@@ -9,26 +9,106 @@
 
 [data-clone] {
     // Your custom CSS goes here.
-    .pg-hero {
-        align-items: center;
-        display: flex;
-        height: 100vh;
-        justify-content: center;
+    .hidden {
+        display: none;
+    }
+    .sidebar-wrapper {
         position: relative;
-        width: 100vw;
-        >div {
-            width: 90%;
-            @media #{$clone-tablet-landscape} {
-                width: 50%;
+    }
+    .sidebar {
+        position: sticky;
+        top: 0;
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        .sidebar-complete {
+            span {
+                color: $clone-go;
+                font-size: 2rem;
+                line-height: 1;
+                margin: 0 .5rem 0 0;
+                vertical-align: middle;
             }
-            .pg-alert {
-                background: #f14948;
-                background: -moz-linear-gradient(45deg, #f14948 0%, #f7af5b 100%);
-                background: -webkit-linear-gradient(45deg, #f14948 0%,#f7af5b 100%);
-                background: linear-gradient(45deg, #f14948 0%,#f7af5b 100%);
-                filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f14948', endColorstr='#f7af5b',GradientType=1 );
-                a {
-                    color: $clone-white;
+        }
+        .sidebar-incomplete {
+            span {
+                color: $clone-slow;
+                font-size: 2rem;
+                line-height: 1;
+                margin: 0 .5rem 0 0;
+                vertical-align: middle;
+            }
+        }
+        .sidebar-error {
+            span {
+                color: $clone-stop;
+                font-size: 2rem;
+                line-height: 1;
+                margin: 0 .5rem 0 0;
+                vertical-align: middle;
+            }
+        }
+    }
+    .sidebar-content {
+        >div,
+        >form {
+            margin: 0 auto;
+            max-width: $clone-medium-layout;
+        }
+    }
+    h2 {
+        &[data-gc-section-status="incomplete"] {
+            i {
+                color: $clone-slow;
+                font-size: 2rem;
+                line-height: 1;
+                margin: 0 .5rem 0 0;
+                vertical-align: middle;
+                &:nth-child(1) {
+                    display: inline;
+                }
+                &:nth-child(2) {
+                    display: none;
+                }
+                &:nth-child(3) {
+                    display: none;
+                }
+            }
+        }
+        &[data-gc-section-status="error"] {
+            i {
+                color: $clone-stop;
+                font-size: 2rem;
+                line-height: 1;
+                margin: 0 .5rem 0 0;
+                vertical-align: middle;
+                &:nth-child(1) {
+                    display: none;
+                }
+                &:nth-child(2) {
+                    display: inline;
+                }
+                &:nth-child(3) {
+                    display: none;
+                }
+            }
+        }
+        &[data-gc-section-status="complete"] {
+            i {
+                color: $clone-go;
+                font-size: 2rem;
+                line-height: 1;
+                margin: 0 .5rem 0 0;
+                vertical-align: middle;
+                &:nth-child(1) {
+                    display: none;
+                }
+                &:nth-child(2) {
+                    display: none;
+                }
+                &:nth-child(3) {
+                    display: inline;
                 }
             }
         }

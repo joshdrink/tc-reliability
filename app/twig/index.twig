@@ -5,7 +5,7 @@
     <head>
 
         {# Site Title #}
-        <title>Clone: Playground</title>
+        <title>Government of Canada: Reliability Demo Form</title>
         
         {# Charset #}
         <meta charset="utf-8" />
@@ -50,18 +50,55 @@
     {# Playground's Body #}
     <body data-clone>
 
-        <div class="pg-hero">
-            <div data-c-radius="rounded">
-                <div data-c-background="black(100)" data-c-color="white" data-c-padding="all(double)">
-                    <h1 data-c-font-size="h1" data-c-margin="bottom(normal)" data-c-font-weight="bold">Welcome to Clone Playground!</h1>
-                    <p data-c-margin="bottom(half)">Playground gives you access to everything you need to have some fun prototyping things with Clone. You can stick to regular HTML, or you can dive into the deep end and build some fun stuff with JavaScript, Sass, and Twig.</p>
-                    <p>Take a peek inside <span data-c-font="mono">app/twig/index.twig</span> to get started!</p>
-                </div>
-                <div class="pg-alert" data-c-color="white" data-c-padding="tb(normal) rl(double)">
-                    <p>Need a refresher on how to use Clone? <a href="https://designwithclone.ca/" title="Open the Clone documentation in a new window or tab." target="_blank">Check out the docs</a>.</p>
+        <div data-c-visibility="hidden">
+            {# {% include "templates/repeaters/legal-name.twig" %} #}
+        </div>
+
+        <div>
+            <div data-c-container="large">
+                <div data-c-grid="gutter">
+                    <div data-c-grid-item="tl(1of4) ds(1of5)" class="sidebar-wrapper">
+                        <div class="sidebar" data-c-padding="tb(triple)">
+                            <span data-c-font-weight="bold" data-c-font-size="h4">Reliability Form</span>
+                            <nav data-c-margin="top(normal)">
+                                <ul>
+                                    <li class="sidebar-complete"><span>•</span><a href="#consent" title="">Consent &amp; Verification</a></li>
+                                    <li class="sidebar-incomplete"><span>•</span><a href="#background" title="">Background Information</a></li>
+                                    <li class="sidebar-incomplete"><span>•</span><a href="#residence" title="">Residence</a></li>
+                                    <li class="sidebar-incomplete"><span>•</span><a href="#experience" title="">Professional Background</a></li>
+                                    <li class="sidebar-incomplete"><span>•</span><a href="#references" title="">Personal References</a></li>
+                                    <li class="sidebar-incomplete"><span>•</span><a href="#education" title="">Education &amp; Professional Designations</a></li>
+                                    <li class="sidebar-error"><span>•</span><a href="#record" title="">Criminal Record</a></li>
+                                    <li class="sidebar-incomplete"><span>•</span><a href="#summary" title="">Signature</a></li>
+                                </ul>
+                            </nav>
+                            <button data-c-margin="top(double)" data-c-button="solid(go)" type="button" data-c-radius="rounded">
+                                Save My Progress
+                            </button>
+                        </div>
+                    </div>
+                    <div data-c-grid-item="tl(3of4) ds(4of5)" class="sidebar-content">
+                        <form data-c-grid="gutter">
+                            <div data-c-grid-item="base(1of1)">
+                                <p data-c-margin="top(triple)">Welcome to the reliability security clearance application form.</p>
+                            </div>
+                            {% include "templates/consent.twig" %}
+                            {% include "templates/background-info.twig" %}
+                            {% include "templates/residence.twig" %}
+                            {% include "templates/experience.twig" %}
+                            {% include "templates/references.twig" %}
+                            {% include "templates/education.twig" %}
+                            {% include "templates/records.twig" %}
+                            {% include "templates/summary.twig" %}
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
+
+        <div data-c-dialog-overlay></div>
+
+        {% include "templates/dialogs/legal-name.twig" %}
 
         {# Clone's JavaScript #}
         <script src="$ROOT/js/clone/clone.min.js"></script>
