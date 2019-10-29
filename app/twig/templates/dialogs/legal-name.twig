@@ -8,21 +8,24 @@
     role="dialog">
     <div
         data-c-background="white(100)"
-        data-c-radius="rounded">
+        data-c-radius="rounded"
+        data-c-margin="bottom(double)">
         <div
             data-c-padding="tb(normal) right(triple) left(normal)"
-            data-c-border="bottom(thin, solid, black)">
+            data-c-border="bottom(thin, solid, black)"
+            data-c-background="c1(100)">
             <h5
                 data-c-font-size="h4"
                 id="legal-name-dialog-title"
-                data-c-dialog-focus>
+                data-c-dialog-focus data-c-color="white">
                 Add/Edit a Previous Legal Name
             </h5>
+            <p data-c-margin="top(half)" data-c-color="white">Please complete all sections of this form.</p>
             <button
                 data-c-dialog-action="close"
                 data-c-dialog-id="legal-name-dialog"
                 type="button">
-                <i class="material-icons">close</i>
+                <i class="material-icons" data-c-color="white">close</i>
             </button>
         </div>
         <div
@@ -96,19 +99,7 @@
                             </i>
                             <select required id="SEL2">
                                 <option disabled selected>Select a province/state...</option>
-                                <option>Alberta</option>
-                                <option>British Columbia</option>
-                                <option>Manitoba</option>
-                                <option>New Brunswick</option>
-                                <option>Newfoundland and Labrador</option>
-                                <option>Northwest Territories</option>
-                                <option>Nova Scotia</option>
-                                <option>Nunavut</option>
-                                <option>Ontario</option>
-                                <option>Prince Edward Island</option>
-                                <option>Quebec</option>
-                                <option>Saskatchewan</option>
-                                <option>Yukon</option>
+                                {% include "../partials/provinces.twig" %}
                             </select>
                         </div>
                         <span>This input has an error.</span>

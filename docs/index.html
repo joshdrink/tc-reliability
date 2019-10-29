@@ -178,9 +178,9 @@
 </div>
                             <div data-c-grid-item="base(1of1)">
     <span id="background"></span>
-    <h2 data-gc-section-status="incomplete" data-c-margin="top(triple) bottom(normal)"><i class="material-icons">error</i><i class="material-icons">warning</i><i class="material-icons">check_circle</i>Background Information</h2>
+    <h2 data-c-font-size="h3" data-gc-section-status="incomplete" data-c-margin="top(triple) bottom(normal)"><i class="material-icons">error</i><i class="material-icons">warning</i><i class="material-icons">check_circle</i>Background Information</h2>
     <hr data-c-margin="tb(double)">
-    <h3 data-c-margin="top(double) bottom(normal)">Legal Name &amp; Contact Information</h3>
+    <h3 data-c-font-size="h4" data-c-color="c1" data-c-margin="top(double) bottom(normal)">Legal Name &amp; Contact Information</h3>
 </div>
 <div data-c-input="text" data-c-grid-item="base(1of3)">
     <label for="TI2">Surname</label>
@@ -334,7 +334,7 @@
 
 
 <div data-c-grid-item="base(1of1)">
-    <h3 data-c-margin="top(double) bottom(normal)">Previous Legal Names</h3>
+    <h3 data-c-font-size="h4" data-c-color="c1" data-c-margin="top(double) bottom(normal)">Previous Legal Names</h3>
 </div>
 <div data-c-grid-item="base(1of1)">
     <p data-c-margin="bottom(double)">Have you previously had different legal names? If not, you can leave this section blank. If you have had different legal names in the past, please add each one using the button.</p>
@@ -352,12 +352,262 @@
 
 
 <div data-c-grid-item="base(1of1)">
-    <h3 data-c-margin="top(double) bottom(normal)">Citizenship</h3>
+    <h3 data-c-font-size="h4" data-c-color="c1" data-c-margin="top(double) bottom(normal)">Citizenship</h3>
+</div>
+<div data-c-input="radio" data-c-grid-item="base(1of1)">
+    <label for="citizenCanada">Are you a Canadian citizen?</label>
+    <span>Required</span>
+    <div id="citizenCanada" role="radiogroup">
+        <label for="citizenCanadaYes" data-gc-citizen-true-trigger>
+            <input id="citizenCanadaYes" required name="citizenCanada" type="radio" />
+            <span>Yes, I am a Canadian citizen.</span>
+        </label>
+        <label for="citizenCanadaNo" data-gc-citizen-false-trigger>
+            <input id="citizenCanadaNo" required name="citizenCanada" type="radio" />
+            <span>No, I'm not a Canadian citizen.</span>
+        </label>
+    </div>
+    <span>This input has an error.</span>
+</div>
+
+<div data-gc-citizen-false class="hidden" data-c-grid-item="base(1of1)">
+    <div data-c-grid="gutter">
+        <div data-c-input="text" data-c-grid-item="base(1of1)">
+            <label for="TI2">What foreign citizenship do you hold?</label>
+            <span>Required</span>
+            <div>
+                <input id="TI2" placeholder="e.g. United States of America" required type="text" />
+            </div>
+            <span>This input has an error.</span>
+        </div>
+    </div>
+</div>
+
+<div data-c-input="radio" data-c-grid-item="base(1of1)">
+    <label for="multipleCitizen">Do you hold multiple citizenships?</label>
+    <span>Required</span>
+    <div id="multipleCitizen" role="radiogroup">
+        <label for="multipleCitizenYes" data-gc-multiple-citizen-true-trigger>
+            <input id="multipleCitizenYes" required name="multipleCitizen" type="radio" />
+            <span>Yes, I have multiple citizenships.</span>
+        </label>
+        <label for="multipleCitizenNo" data-gc-multiple-citizen-false-trigger>
+            <input id="multipleCitizenNo" required name="multipleCitizen" type="radio" />
+            <span>No, I do not have multiple citizenships.</span>
+        </label>
+    </div>
+    <span>This input has an error.</span>
+</div>
+
+<div data-gc-multiple-citizen-true class="hidden" data-c-grid-item="base(1of1)">
+    <div data-c-grid="gutter">
+        <div data-c-input="text" data-c-grid-item="base(1of1)">
+            <label for="TI2">Please list all countries that have granted you citizenship.</label>
+            <span>Required</span>
+            <div>
+                <input id="TI2" placeholder="e.g. United States of America" required type="text" />
+            </div>
+            <span>This input has an error.</span>
+        </div>
+    </div>
+</div>
+
+<div data-c-input="select" data-c-grid-item="base(1of3)">
+    <label for="SEL2">Country of Birth</label>
+    <span>Required</span>
+    <div>
+        <i class="material-icons">
+            arrow_drop_down
+        </i>
+        <select required id="SEL2" data-gc-home-select>
+            <option disabled>Select a country...</option>
+            <option selected value="Canada">Canada</option>
+            <option>United States of America</option>
+        </select>
+    </div>
+    <span>This input has an error.</span>
+</div>
+<div data-c-input="select" data-c-grid-item="base(1of3)">
+    <label for="SEL2">Province or State of Birth</label>
+    <span>Required</span>
+    <div>
+        <i class="material-icons">
+            arrow_drop_down
+        </i>
+        <select required id="SEL2">
+            <option disabled selected>Select a province/state...</option>
+            <option>Alberta</option>
+<option>British Columbia</option>
+<option>Manitoba</option>
+<option>New Brunswick</option>
+<option>Newfoundland and Labrador</option>
+<option>Northwest Territories</option>
+<option>Nova Scotia</option>
+<option>Nunavut</option>
+<option>Ontario</option>
+<option>Prince Edward Island</option>
+<option>Quebec</option>
+<option>Saskatchewan</option>
+<option>Yukon</option>
+        </select>
+    </div>
+    <span>This input has an error.</span>
+</div>
+<div data-c-input="text" data-c-grid-item="base(1of3)">
+    <label for="TI2">City or Town of Birth</label>
+    <span>Required</span>
+    <div>
+        <input id="TI2" placeholder="e.g. Clark Kent" required type="text" />
+    </div>
+    <span>This input has an error.</span>
+</div>
+
+<div data-gc-foreign-born class="hidden" data-c-grid-item="base(1of1)">
+    <div data-c-grid="gutter">
+        <div data-c-grid-item="base(1of1)">
+            <p data-c-margin="bottom(normal)">As someone born outside of Canada...</p>
+        </div>
+        <div data-c-input="date" data-c-grid-item="base(1of1)">
+            <label for="DAT2">Date of Entry into Canada</label>
+            <span>Required</span>
+            <div>
+                <input
+                    id="DAT2"
+                    type="date"
+                    required/>
+            </div>
+            <span>This input has an error.</span>
+        </div>
+        
+        <div data-c-input="radio" data-c-grid-item="base(1of1)">
+            <label for="naturalized">Are you a naturalized Canadian citizen?</label>
+            <span>Required</span>
+            <div id="naturalized" role="radiogroup">
+                <label for="naturalizedYes" data-gc-naturalization-true-trigger>
+                    <input id="naturalizedYes" required name="naturalized" type="radio" />
+                    <span>Yes</span>
+                </label>
+                <label for="naturalizedNo" data-gc-naturalization-false-trigger>
+                    <input id="naturalizedNo" required name="naturalized" type="radio" />
+                    <span>No</span>
+                </label>
+            </div>
+            <span>This input has an error.</span>
+        </div>
+            
+            <div data-gc-naturalization-true class="hidden" data-c-grid-item="base(1of1)">
+                <div data-c-grid="gutter">
+                    <div data-c-input="number" data-c-grid-item="base(1of2)">
+                        <label for="NUM2">Certificate Number</label>
+                        <span>Required</span>
+                        <div>
+                            <input id="NUM2" placeholder="0" required type="number" />
+                        </div>
+                        <span>This input has an error.</span>
+                    </div>
+                    <div data-c-input="date" data-c-grid-item="base(1of2)">
+                        <label for="DAT2">Date of Issue</label>
+                        <span>Required</span>
+                        <div>
+                            <input
+                                id="DAT2"
+                                type="date"
+                                required/>
+                        </div>
+                        <span>This input has an error.</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div data-gc-naturalization-false class="hidden" data-c-grid-item="base(1of1)">
+                <div data-c-grid="gutter">
+                    <div data-c-input="radio" data-c-grid-item="base(1of1)">
+                        <label for="naturalizedApplication">Have you applied for a Canadian citizenship?</label>
+                        <span>Required</span>
+                        <div id="naturalizedApplication" role="radiogroup">
+                            <label for="naturalizedApplicationYes" data-gc-naturalization-application-true-trigger>
+                                <input id="naturalizedApplicationYes" required name="naturalizedApplication" type="radio" />
+                                <span>Yes</span>
+                            </label>
+                            <label for="naturalizedApplicationNo" data-gc-naturalization-application-false-trigger>
+                                <input id="naturalizedApplicationNo" required name="naturalizedApplication" type="radio" />
+                                <span>No</span>
+                            </label>
+                        </div>
+                        <span>This input has an error.</span>
+                    </div>
+                        
+                        <div data-gc-naturalization-application-true class="hidden" data-c-grid-item="base(1of1)">
+                            <p data-c-margin="bottom(normal)">If applicable, attach a copy of your permanent resident status, landed documentation or refugee status to this form. If you were born abroad but have Canadian parents, attach a copy of your certificate or registration of birth abroad to this form.</p>
+                            <div data-c-border="all(thin, solid, gray)" data-c-radius="rounded" data-c-background="gray(10)">
+                                <div data-c-grid>
+                                    <div data-c-grid-item="base(1of3)" data-c-padding="normal">
+                                        <p>Permanent Residency</p>
+                                    </div>
+                                    <div data-c-grid-item="base(2of3)" data-c-padding="normal">
+                                        <input type="file" id="input" multiple>
+                                    </div>
+                                    <div data-c-grid-item="base(1of3)" data-c-padding="normal">
+                                        <p>Refugee Status</p>
+                                    </div>
+                                    <div data-c-grid-item="base(2of3)" data-c-padding="normal">
+                                        <input type="file" id="input" multiple>
+                                    </div>
+                                    <div data-c-grid-item="base(1of3)" data-c-padding="normal">
+                                        <p>Birth Certificate or Registration</p>
+                                    </div>
+                                    <div data-c-grid-item="base(2of3)" data-c-padding="normal">
+                                        <input type="file" id="input" multiple>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div data-gc-naturalization-application-false class="hidden" data-c-grid-item="base(1of1)">
+                            <p data-c-margin="bottom(normal)">Please indicate your status in Canada by attaching copies of the documents that support your status declaration to this form.</p>
+                            <div data-c-border="all(thin, solid, gray)" data-c-radius="rounded" data-c-background="gray(10)">
+                                <div data-c-grid>
+                                    <div data-c-grid-item="base(1of3)" data-c-padding="normal">
+                                        <p>Work Permit</p>
+                                    </div>
+                                    <div data-c-grid-item="base(2of3)" data-c-padding="normal">
+                                        <input type="file" id="input" multiple>
+                                    </div>
+                                    <div data-c-grid-item="base(1of3)" data-c-padding="normal">
+                                        <p>Study Permit</p>
+                                    </div>
+                                    <div data-c-grid-item="base(2of3)" data-c-padding="normal">
+                                        <input type="file" id="input" multiple>
+                                    </div>
+                                    <div data-c-grid-item="base(1of3)" data-c-padding="normal">
+                                        <p>Protected Person</p>
+                                    </div>
+                                    <div data-c-grid-item="base(2of3)" data-c-padding="normal">
+                                        <input type="file" id="input" multiple>
+                                    </div>
+                                    <div data-c-grid-item="base(1of3)" data-c-padding="normal">
+                                        <p>Visitor Visa</p>
+                                    </div>
+                                    <div data-c-grid-item="base(2of3)" data-c-padding="normal">
+                                        <input type="file" id="input" multiple>
+                                    </div>
+                                    <div data-c-grid-item="base(1of3)" data-c-padding="normal">
+                                        <p>Other</p>
+                                    </div>
+                                    <div data-c-grid-item="base(2of3)" data-c-padding="normal">
+                                        <input type="file" id="input" multiple>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+            </div>
+    </div>
 </div>
 
 
 <div data-c-grid-item="base(1of1)">
-    <h3 data-c-margin="top(double) bottom(normal)">Previous Security Screening</h3>
+    <h3 data-c-font-size="h4" data-c-color="c1" data-c-margin="top(double) bottom(normal)">Previous Security Screening</h3>
 </div>
 <div data-c-grid-item="base(1of1)">
     <p data-c-margin="bottom(normal)">Have you <span data-c-font-weight="bold">previously applied</span> for a security status and/or clearance with:</p>
@@ -457,15 +707,95 @@
 
                             <div data-c-grid-item="base(1of1)">
     <span id="residence"></span>
-    <h2 data-gc-section-status="incomplete" data-c-margin="top(triple) bottom(normal)"><i class="material-icons">error</i><i class="material-icons">warning</i><i class="material-icons">check_circle</i>Residence</h2>
+    <h2 data-c-font-size="h3" data-gc-section-status="incomplete" data-c-margin="top(triple) bottom(normal)"><i class="material-icons">error</i><i class="material-icons">warning</i><i class="material-icons">check_circle</i>Residence</h2>
     <hr data-c-margin="tb(double)">
-    <p data-c-margin="bottom(normal)" data-c-font-weight="bold">Ensure that there are no gaps in the dates that you provide below.</p>
-    <p data-c-margin="bottom(normal)">For reliability status, enhanced reliability status, site access status and site access status with additional inquiries, list all (including temporary) addresses where you have lived in the last 5 years, beginning with your current address.</p>
+    <p>For reliability status, enhanced reliability status, site access status and site access status with additional inquiries, <span data-c-font-weight="bold">list all (including temporary) addresses where you have lived in the last 5 years</span>, beginning with your current address. Ensure that there are no gaps in the dates that you provide below.</p>
 </div>
 <div data-c-grid-item="base(1of1)">
+    <p data-c-margin="bottom(double)">You've covered a period of <span data-c-font-weight="bold" data-c-color="stop">4</span> out of the 5 required years.</p>
     <div data-gc-residence data-c-margin="bottom(double)">
-        <div data-gc-residence-null data-c-border="all(thin, solid, gray)" data-c-background="gray(10)" data-c-radius="rounded" data-c-padding="normal" data-c-align="base(center)">
-            <p>You haven't added any residences yet.</p>
+        <h3 data-c-font-size="h4" data-c-color="c1" data-c-margin="top(normal) bottom(normal)">My Current Address</h3>
+        
+        <div data-c-border="all(thin, solid, gray)" data-c-background="gray(10)" data-c-radius="rounded">
+            <div data-c-padding="normal" data-c-border="bottom(thin, solid, gray)">
+                <div data-c-grid="gutter middle">
+                    <div data-c-grid-item="base(1of2)">
+                        <p>May 01, 2019 - Present</p>
+                    </div>
+                    <div data-c-grid-item="base(1of2)" data-c-align="base(right)">
+                        <button data-c-button="reset" data-c-font-style="underline" data-c-margin="right(normal)">Edit</button>
+                        <button data-c-button="reset" data-c-font-style="underline">Remove</button>
+                    </div>
+                </div>
+            </div>
+            <div data-c-padding="normal">
+                <p>3 - 55 Solace Avenue</p>
+                <p>Gatineau, QC, A1B 2C3</p>
+                <p>Canada</p>
+                <p>(555) 555-5555</p>
+            </div>
+        </div>
+        <h3 data-c-font-size="h4" data-c-color="c1" data-c-margin="top(double) bottom(normal)">Previous Addresses</h3>
+        
+        <div data-c-border="all(thin, solid, gray)" data-c-background="gray(10)" data-c-radius="rounded" data-c-margin="bottom(normal)">
+            <div data-c-padding="normal" data-c-border="bottom(thin, solid, gray)">
+                <div data-c-grid="gutter middle">
+                    <div data-c-grid-item="base(1of2)">
+                        <p>March 01, 2019 - April 30, 2019</p>
+                    </div>
+                    <div data-c-grid-item="base(1of2)" data-c-align="base(right)">
+                        <button data-c-button="reset" data-c-font-style="underline" data-c-margin="right(normal)">Edit</button>
+                        <button data-c-button="reset" data-c-font-style="underline">Remove</button>
+                    </div>
+                </div>
+            </div>
+            <div data-c-padding="normal">
+                <p>1278 Nightly County Road</p>
+                <p>Winchester, ON, A1B 2C3</p>
+                <p>Canada</p>
+                <p>(555) 555-5555</p>
+            </div>
+        </div>
+        <div
+            data-c-alert="error"
+            data-c-radius="rounded"
+            role="alert"
+            data-c-margin="bottom(normal)">
+            <div data-c-padding="half">
+                <p
+                    data-c-margin="bottom(quarter)"
+                    data-c-heading="h5"
+                    data-c-font-weight="bold">
+                    <i
+                        aria-hidden="true"
+                        class="material-icons">
+                        report_problem
+                    </i>
+                    There seems to be a gap here.
+                </p>
+                <p>
+                    We've noticed a gap in your dates. Please ensure that there are no gaps in your residence before submitting this form.
+                </p>
+            </div>
+        </div>
+        <div data-c-border="all(thin, solid, gray)" data-c-background="gray(10)" data-c-radius="rounded" data-c-margin="bottom(normal)">
+            <div data-c-padding="normal" data-c-border="bottom(thin, solid, gray)">
+                <div data-c-grid="gutter middle">
+                    <div data-c-grid-item="base(1of2)">
+                        <p>March 4, 2015 - February 1, 2019</p>
+                    </div>
+                    <div data-c-grid-item="base(1of2)" data-c-align="base(right)">
+                        <button data-c-button="reset" data-c-font-style="underline" data-c-margin="right(normal)">Edit</button>
+                        <button data-c-button="reset" data-c-font-style="underline">Remove</button>
+                    </div>
+                </div>
+            </div>
+            <div data-c-padding="normal">
+                <p>45B - 20 Franklink Crescent</p>
+                <p>Ottawa, ON, A1B 2C3</p>
+                <p>Canada</p>
+                <p>(555) 555-5555</p>
+            </div>
         </div>
     </div>
     <div data-c-align="base(right)">
@@ -602,21 +932,24 @@
     role="dialog">
     <div
         data-c-background="white(100)"
-        data-c-radius="rounded">
+        data-c-radius="rounded"
+        data-c-margin="bottom(double)">
         <div
             data-c-padding="tb(normal) right(triple) left(normal)"
-            data-c-border="bottom(thin, solid, black)">
+            data-c-border="bottom(thin, solid, black)"
+            data-c-background="c1(100)">
             <h5
                 data-c-font-size="h4"
                 id="legal-name-dialog-title"
-                data-c-dialog-focus>
+                data-c-dialog-focus data-c-color="white">
                 Add/Edit a Previous Legal Name
             </h5>
+            <p data-c-margin="top(half)" data-c-color="white">Please complete all sections of this form.</p>
             <button
                 data-c-dialog-action="close"
                 data-c-dialog-id="legal-name-dialog"
                 type="button">
-                <i class="material-icons">close</i>
+                <i class="material-icons" data-c-color="white">close</i>
             </button>
         </div>
         <div
@@ -691,18 +1024,18 @@
                             <select required id="SEL2">
                                 <option disabled selected>Select a province/state...</option>
                                 <option>Alberta</option>
-                                <option>British Columbia</option>
-                                <option>Manitoba</option>
-                                <option>New Brunswick</option>
-                                <option>Newfoundland and Labrador</option>
-                                <option>Northwest Territories</option>
-                                <option>Nova Scotia</option>
-                                <option>Nunavut</option>
-                                <option>Ontario</option>
-                                <option>Prince Edward Island</option>
-                                <option>Quebec</option>
-                                <option>Saskatchewan</option>
-                                <option>Yukon</option>
+<option>British Columbia</option>
+<option>Manitoba</option>
+<option>New Brunswick</option>
+<option>Newfoundland and Labrador</option>
+<option>Northwest Territories</option>
+<option>Nova Scotia</option>
+<option>Nunavut</option>
+<option>Ontario</option>
+<option>Prince Edward Island</option>
+<option>Quebec</option>
+<option>Saskatchewan</option>
+<option>Yukon</option>
                             </select>
                         </div>
                         <span>This input has an error.</span>
