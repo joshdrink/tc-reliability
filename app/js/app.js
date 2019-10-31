@@ -191,3 +191,113 @@ $("[data-gc-naturalization-application-false-trigger]").on("click", function() {
         $("[data-gc-naturalization-application-true]").addClass("hidden");
     }
 });
+
+// Previous Screening ==========================================================
+
+    // Applications
+    $("[data-gc-screen-apply-true-trigger]").on("click", function() {
+        if ($(this).hasClass("active")) {
+
+        } else {
+            // Triger this elements stuff.
+            $(this).addClass("active");
+            $("[data-gc-screen-apply-true]").removeClass("hidden");
+            // Remove alternative option's stuff.
+            $("[data-gc-screen-apply-false-trigger]").removeClass("active");
+            $("[data-gc-screen-apply-false]").addClass("hidden");
+        }
+    });
+
+    $("[data-gc-screen-apply-false-trigger]").on("click", function() {
+        if ($(this).hasClass("active")) {
+
+        } else {
+            // Triger this elements stuff.
+            $(this).addClass("active");
+            $("[data-gc-screen-apply-false]").removeClass("hidden");
+            // Remove alternative option's stuff.
+            $("[data-gc-screen-apply-true-trigger]").removeClass("active");
+            $("[data-gc-screen-apply-true]").addClass("hidden");
+        }
+    });
+
+    // Granted
+    $("[data-gc-screen-granted-true-trigger]").on("click", function() {
+        if ($(this).hasClass("active")) {
+
+        } else {
+            // Triger this elements stuff.
+            $(this).addClass("active");
+            $("[data-gc-screen-granted-true]").removeClass("hidden");
+            // Remove alternative option's stuff.
+            $("[data-gc-screen-granted-false-trigger]").removeClass("active");
+            $("[data-gc-screen-granted-false]").addClass("hidden");
+        }
+    });
+
+    $("[data-gc-screen-granted-false-trigger]").on("click", function() {
+        if ($(this).hasClass("active")) {
+
+        } else {
+            // Triger this elements stuff.
+            $(this).addClass("active");
+            $("[data-gc-screen-granted-false]").removeClass("hidden");
+            // Remove alternative option's stuff.
+            $("[data-gc-screen-granted-true-trigger]").removeClass("active");
+            $("[data-gc-screen-granted-true]").addClass("hidden");
+        }
+    });
+
+    // Revoked
+    $("[data-gc-screen-revoked-true-trigger]").on("click", function() {
+        if ($(this).hasClass("active")) {
+
+        } else {
+            // Triger this elements stuff.
+            $(this).addClass("active");
+            $("[data-gc-screen-revoked-true]").removeClass("hidden");
+            // Remove alternative option's stuff.
+            $("[data-gc-screen-revoked-false-trigger]").removeClass("active");
+            $("[data-gc-screen-revoked-false]").addClass("hidden");
+        }
+    });
+
+    $("[data-gc-screen-revoked-false-trigger]").on("click", function() {
+        if ($(this).hasClass("active")) {
+
+        } else {
+            // Triger this elements stuff.
+            $(this).addClass("active");
+            $("[data-gc-screen-revoked-false]").removeClass("hidden");
+            // Remove alternative option's stuff.
+            $("[data-gc-screen-revoked-true-trigger]").removeClass("active");
+            $("[data-gc-screen-revoked-true]").addClass("hidden");
+        }
+    });
+
+    // Denied
+    $("[data-gc-screen-denied-true-trigger]").on("click", function() {
+        if ($(this).hasClass("active")) {
+
+        } else {
+            // Triger this elements stuff.
+            $(this).addClass("active");
+            $("[data-gc-screen-denied-true]").removeClass("hidden");
+            // Remove alternative option's stuff.
+            $("[data-gc-screen-denied-false-trigger]").removeClass("active");
+            $("[data-gc-screen-denied-false]").addClass("hidden");
+        }
+    });
+
+    $("[data-gc-screen-denied-false-trigger]").on("click", function() {
+        if ($(this).hasClass("active")) {
+
+        } else {
+            // Triger this elements stuff.
+            $(this).addClass("active");
+            $("[data-gc-screen-denied-false]").removeClass("hidden");
+            // Remove alternative option's stuff.
+            $("[data-gc-screen-denied-true-trigger]").removeClass("active");
+            $("[data-gc-screen-denied-true]").addClass("hidden");
+        }
+    });

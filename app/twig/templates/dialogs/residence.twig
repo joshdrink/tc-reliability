@@ -1,9 +1,9 @@
 <div
     aria-hidden="true"
-    aria-describedby="legal-name-dialog-description"
-    aria-labelledby="legal-name-dialog-title"
+    aria-describedby="residence-dialog-description"
+    aria-labelledby="residence-dialog-title"
     data-c-dialog
-    data-c-dialog-id="legal-name-dialog"
+    data-c-dialog-id="residence-dialog"
     data-c-padding="top(double) bottom(double)"
     role="dialog">
     <div
@@ -16,14 +16,14 @@
             data-c-background="c1(100)">
             <h5
                 data-c-font-size="h4"
-                id="legal-name-dialog-title"
+                id="residence-dialog-title"
                 data-c-dialog-focus data-c-color="white">
-                Add/Edit a Previous Legal Name
+                Add/Edit a Residence
             </h5>
             <p data-c-margin="top(half)" data-c-color="white">Please complete all sections of this form.</p>
             <button
                 data-c-dialog-action="close"
-                data-c-dialog-id="legal-name-dialog"
+                data-c-dialog-id="residence-dialog"
                 type="button">
                 <i class="material-icons" data-c-color="white">close</i>
             </button>
@@ -31,53 +31,47 @@
         <div
             data-c-border="bottom(thin, solid, black)"
             data-c-padding="normal">
-            <div id="legal-name-dialog-description">
+            <div id="residence-dialog-description">
                 <form data-c-grid="gutter">
-                    <div data-c-input="text" data-c-grid-item="tl(1of2)">
-                        <label for="TI2">Previous Surname</label>
+                    <div data-c-input="checkbox(group)" data-c-grid-item="base(1of1)">
+                        <label>&nbsp;</label>
                         <span>Required</span>
                         <div>
-                            <input id="TI2" placeholder="e.g. Kent" required type="text" />
+                            <label for="residenceCurrent">
+                                <input
+                                    id="residenceCurrent"
+                                    type="checkbox"/>
+                                <span>This is my current address.</span>
+                            </label>
                         </div>
                         <span>This input has an error.</span>
                     </div>
-                    <div data-c-input="text" data-c-grid-item="tl(1of2)">
-                        <label for="TI2">Previous Given Names (No Initials)</label>
+                    <div data-c-input="text" data-c-grid-item="tl(1of3)">
+                        <label for="TI2">My Name</label>
                         <span>Required</span>
                         <div>
-                            <input id="TI2" placeholder="e.g. Clark" required type="text" />
+                            <input id="TI2" placeholder="e.g. Clark Kent" required type="text" />
                         </div>
                         <span>This input has an error.</span>
                     </div>
-                    <div data-c-input="date" data-c-grid-item="tl(1of2)">
-                        <label for="DAT2">Date You Started Using this Name</label>
+                    <div data-c-input="text" data-c-grid-item="tl(1of3)">
+                        <label for="TI2">My Name</label>
                         <span>Required</span>
                         <div>
-                            <input
-                                id="DAT2"
-                                type="date"
-                                required
-                                placeholder="yyyy-mm-dd"/>
+                            <input id="TI2" placeholder="e.g. Clark Kent" required type="text" />
                         </div>
                         <span>This input has an error.</span>
                     </div>
-                    <div data-c-input="date" data-c-grid-item="tl(1of2)">
-                        <label for="DAT2">Date You Finished Using this Name</label>
+                    <div data-c-input="text" data-c-grid-item="tl(1of3)">
+                        <label for="TI2">My Name</label>
                         <span>Required</span>
                         <div>
-                            <input
-                                id="DAT2"
-                                type="date"
-                                required
-                                placeholder="yyyy-mm-dd"/>
+                            <input id="TI2" placeholder="e.g. Clark Kent" required type="text" />
                         </div>
                         <span>This input has an error.</span>
-                    </div>
-                    <div data-c-grid-item="base(1of1)">
-                        <p>I changed this name in the following location:</p>
                     </div>
                     {# Ideally this would be smart - we should leverage a database to ensure proper provinces/states appear for each country. #}
-                    <div data-c-input="select" data-c-grid-item="ds(1of3)">
+                    <div data-c-input="select" data-c-grid-item="tl(1of3)">
                         <label for="SEL2">Country</label>
                         <span>Required</span>
                         <div>
@@ -92,7 +86,7 @@
                         </div>
                         <span>This input has an error.</span>
                     </div>
-                    <div data-c-input="select" data-c-grid-item="ds(1of3)">
+                    <div data-c-input="select" data-c-grid-item="tl(1of3)">
                         <label for="SEL2">Province or State</label>
                         <span>Required</span>
                         <div>
@@ -106,34 +100,11 @@
                         </div>
                         <span>This input has an error.</span>
                     </div>
-                    <div data-c-input="text" data-c-grid-item="ds(1of3)">
+                    <div data-c-input="text" data-c-grid-item="tl(1of3)">
                         <label for="TI2">City or Town</label>
                         <span>Required</span>
                         <div>
                             <input id="TI2" placeholder="e.g. Smallville" required type="text" />
-                        </div>
-                        <span>This input has an error.</span>
-                    </div>
-                    <div data-c-input="radio" data-c-grid-item="base(1of1)">
-                        <label for="previousNameGov1">Government Recognition:</label>
-                        <span>Required</span>
-                        <div id="previousNameGov1" role="radiogroup">
-                            <label for="previousNameGov1Approved">
-                                <input id="previousNameGov1Approved" required name="previousNameGov1" type="radio" />
-                                <span>This name change was recognized by a legal or government authority.</span>
-                            </label>
-                            <label for="previousNameGov1NotApproved">
-                                <input id="previousNameGov1NotApproved" required name="previousNameGov1" type="radio" />
-                                <span>This name change was not recognized.</span>
-                            </label>
-                        </div>
-                        <span>This input has an error.</span>
-                    </div>
-                    <div data-c-input="textarea" data-c-grid-item="base(1of1)">
-                        <label for="TA2">Please explain the reason you changed your name:</label>
-                        <span>Required</span>
-                        <div>
-                            <textarea id="TA2" required placeholder="e.g. One day I found a spaceship in our barn..."></textarea>
                         </div>
                         <span>This input has an error.</span>
                     </div>
@@ -148,7 +119,7 @@
                         data-c-button="outline(slow)"
                         data-c-radius="rounded"
                         data-c-dialog-action="close"
-                        data-c-dialog-id="legal-name-dialog">
+                        data-c-dialog-id="residence-dialog">
                         Cancel
                     </button>
                 </div>
@@ -159,8 +130,8 @@
                         data-c-button="solid(go)"
                         data-c-radius="rounded"
                         data-c-dialog-action="close"
-                        data-c-dialog-id="legal-name-dialog">
-                        Save Name
+                        data-c-dialog-id="residence-dialog">
+                        Save Residence
                     </button>
                 </div>
             </div>
