@@ -314,6 +314,105 @@ $("[data-gc-current-address-trigger]").on("click", function() {
     }
 });
 
+// Current Experience ==========================================================
+$("[data-gc-current-experience-trigger]").on("click", function() {
+    if ($(this).hasClass("active")) {
+        $(this).removeClass("active");
+        $("[data-gc-current-experience]").removeClass("hidden");
+    } else {
+        // Triger this elements stuff.
+        $(this).addClass("active");
+        $("[data-gc-current-experience]").addClass("hidden");
+    }
+});
+
+// Experience Unemployment
+$("[data-gc-experience-unemployed-true-trigger]").on("click", function() {
+    if ($(this).hasClass("active")) {
+
+    } else {
+        // Triger this elements stuff.
+        $(this).addClass("active");
+        $("[data-gc-experience-unemployed-true]").removeClass("hidden");
+        // Remove alternative option's stuff.
+        $("[data-gc-experience-unemployed-false-trigger]").removeClass("active");
+        $("[data-gc-experience-unemployed-false]").addClass("hidden");
+        dialogSizing($("[data-c-dialog][data-c-dialog-id=\"experience-dialog\"]"));
+    }
+});
+
+$("[data-gc-experience-unemployed-false-trigger]").on("click", function() {
+    if ($(this).hasClass("active")) {
+
+    } else {
+        // Triger this elements stuff.
+        $(this).addClass("active");
+        $("[data-gc-experience-unemployed-false]").removeClass("hidden");
+        // Remove alternative option's stuff.
+        $("[data-gc-experience-unemployed-true-trigger]").removeClass("active");
+        $("[data-gc-experience-unemployed-true]").addClass("hidden");
+        dialogSizing($("[data-c-dialog][data-c-dialog-id=\"experience-dialog\"]"));
+    }
+});
+
+// Experience Dismissal
+$("[data-gc-experience-dismissal-true-trigger]").on("click", function() {
+    if ($(this).hasClass("active")) {
+
+    } else {
+        // Triger this elements stuff.
+        $(this).addClass("active");
+        $("[data-gc-experience-dismissal-true]").removeClass("hidden");
+        // Remove alternative option's stuff.
+        $("[data-gc-experience-dismissal-false-trigger]").removeClass("active");
+        $("[data-gc-experience-dismissal-false]").addClass("hidden");
+        dialogSizing($("[data-c-dialog][data-c-dialog-id=\"experience-dialog\"]"));
+    }
+});
+
+$("[data-gc-experience-dismissal-false-trigger]").on("click", function() {
+    if ($(this).hasClass("active")) {
+
+    } else {
+        // Triger this elements stuff.
+        $(this).addClass("active");
+        $("[data-gc-experience-dismissal-false]").removeClass("hidden");
+        // Remove alternative option's stuff.
+        $("[data-gc-experience-dismissal-true-trigger]").removeClass("active");
+        $("[data-gc-experience-dismissal-true]").addClass("hidden");
+        dialogSizing($("[data-c-dialog][data-c-dialog-id=\"experience-dialog\"]"));
+    }
+});
+
+// Experience Supervisor
+$("[data-gc-experience-supervisor-true-trigger]").on("click", function() {
+    if ($(this).hasClass("active")) {
+
+    } else {
+        // Triger this elements stuff.
+        $(this).addClass("active");
+        $("[data-gc-experience-supervisor-true]").removeClass("hidden");
+        // Remove alternative option's stuff.
+        $("[data-gc-experience-supervisor-false-trigger]").removeClass("active");
+        $("[data-gc-experience-supervisor-false]").addClass("hidden");
+        dialogSizing($("[data-c-dialog][data-c-dialog-id=\"experience-dialog\"]"));
+    }
+});
+
+$("[data-gc-experience-supervisor-false-trigger]").on("click", function() {
+    if ($(this).hasClass("active")) {
+
+    } else {
+        // Triger this elements stuff.
+        $(this).addClass("active");
+        $("[data-gc-experience-supervisor-false]").removeClass("hidden");
+        // Remove alternative option's stuff.
+        $("[data-gc-experience-supervisor-true-trigger]").removeClass("active");
+        $("[data-gc-experience-supervisor-true]").addClass("hidden");
+        dialogSizing($("[data-c-dialog][data-c-dialog-id=\"experience-dialog\"]"));
+    }
+});
+
 // Reference Work/Education
 $("[data-gc-reference-work-true-trigger]").on("click", function() {
     if ($(this).hasClass("active")) {
@@ -367,3 +466,48 @@ $("[data-gc-record-false-trigger]").on("click", function() {
         $("[data-gc-record-true]").addClass("hidden");
     }
 });
+
+// Clone Stuff
+// Clone Shorthand =============================================================
+function clone(attr, option, selector) {
+    if (option != null) {
+        if (selector != null) {
+            return '[data-c-' + attr + selector + '=\'' + option + '\']';
+        }
+        else {
+            return '[data-c-' + attr + '=\'' + option + '\']';
+        }
+    }
+    else {
+        return '[data-c-' + attr + ']';
+    }
+}
+// Dialog Sizing -------------------------------------------------------
+function dialogSizing(dialog) {
+    var viewportHeight = $(window).height();
+    if (dialog != null) {
+        var dialogHeight = $(dialog).children("div").height() + 50;
+        if (dialogHeight > viewportHeight) {
+            $(dialog).attr("data-c-dialog", "active--overflowing");
+        }
+        else {
+            $(dialog).attr("data-c-dialog", "active--contained");
+        }
+    }
+    else {
+        $(clone("dialog")).each(function() {
+            if ($(this).attr("data-c-dialog") == false){
+                return false;
+            }
+            else {
+                var dialogHeight = $(this).children("div").height() + 50;
+                if (dialogHeight > viewportHeight) {
+                    $(this).attr("data-c-dialog", "active--overflowing");
+                }
+                else {
+                    $(this).attr("data-c-dialog", "active--contained");
+                }
+            }
+        });
+    }
+}
