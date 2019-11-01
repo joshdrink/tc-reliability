@@ -1214,11 +1214,30 @@
         <li>any periods of unemployment or retirement</li>
     </ul>
     <p data-c-margin="bottom(normal)">For reliability status, enhanced reliability status, site access status and site access status with additional inquiries, <span data-c-font-weight="bold">list your employment and education in the last 5 years, or from your 16th birthday</span>, beginning with your current employer or school. Ensure that there are no gaps in the dates that you provide below.</p>
-    <p data-c-margin="bottom(double)">Please provide information up until <span data-c-font-weight="bold">October 2014</span>. You've covered a period of <span data-c-font-weight="bold" data-c-color="stop">3</span> out of the 5 required years.</p>
+    <p>Please provide information up until <span data-c-font-weight="bold">October 2014</span>. You've covered a period of <span data-c-font-weight="bold" data-c-color="stop">3</span> out of the 5 required years.</p>
 </div>
 <div data-c-grid-item="base(1of1)">
     <div data-gc-residence data-c-margin="bottom(double)">
-        <div data-gc-residence-null data-c-border="all(thin, solid, gray)" data-c-background="gray(10)" data-c-radius="rounded" data-c-padding="normal" data-c-align="base(center)">
+        <h3 data-c-font-size="h4" data-c-color="c3" data-c-margin="top(normal) bottom(normal)">My Current Employment/Education</h3>
+        <div data-c-border="all(thin, solid, gray)" data-c-background="gray(10)" data-c-radius="rounded">
+            
+            <div data-c-padding="normal" data-c-border="bottom(thin, solid, gray)">
+                <div data-c-grid="gutter middle">
+                    <div data-c-grid-item="base(1of2)">
+                        <p>August 1, 2016 - Present</p>
+                    </div>
+                    <div data-c-grid-item="base(1of2)" data-c-align="base(right)">
+                        <button title="This button is disabled for demo purposes." type="button" data-c-button="reset" data-c-font-style="underline" data-c-margin="right(normal)">Edit</button>
+                        <button title="This button is disabled for demo purposes." type="button" data-c-button="reset" data-c-font-style="underline">Remove</button>
+                    </div>
+                </div>
+            </div>
+            <div data-c-padding="normal">
+                
+            </div>
+        </div>
+        <h3 data-c-font-size="h4" data-c-color="c3" data-c-margin="top(double) bottom(normal)">Previous Employment/Education</h3>
+        <div data-gc-experience-past-null data-c-border="all(thin, solid, gray)" data-c-background="gray(10)" data-c-radius="rounded" data-c-padding="normal" data-c-align="base(center)">
             <p>You haven't added any professional experience yet.</p>
         </div>
     </div>
@@ -1285,7 +1304,7 @@
         </div>
     </div>
     <div data-c-align="base(right)">
-        <button data-c-button="solid(c1)" data-c-radius="rounded" data-c-dialog-id="residence-dialog" data-c-dialog-action="open" type="button">
+        <button data-c-button="solid(c1)" data-c-radius="rounded" data-c-dialog-id="education-dialog" data-c-dialog-action="open" type="button">
             Add Education
         </button>
     </div>
@@ -1301,7 +1320,7 @@
         </div>
     </div>
     <div data-c-align="base(right)">
-        <button data-c-button="solid(c1)" data-c-radius="rounded" data-c-dialog-id="residence-dialog" data-c-dialog-action="open" type="button">
+        <button data-c-button="solid(c1)" data-c-radius="rounded" data-c-dialog-id="designation-dialog" data-c-dialog-action="open" type="button">
             Add a Designation
         </button>
     </div>
@@ -2151,8 +2170,384 @@
         </div>
     </div>
 </div>
-        
-        
+        <div
+    aria-hidden="true"
+    aria-describedby="education-dialog-description"
+    aria-labelledby="education-dialog-title"
+    data-c-dialog
+    data-c-dialog-id="education-dialog"
+    data-c-padding="top(double) bottom(double)"
+    role="dialog">
+    <div
+        data-c-background="white(100)"
+        data-c-radius="rounded"
+        data-c-margin="bottom(double)">
+        <div
+            data-c-padding="tb(normal) right(triple) left(normal)"
+            data-c-border="bottom(thin, solid, black)"
+            data-c-background="c1(100)">
+            <h5
+                data-c-font-size="h4"
+                id="education-dialog-title"
+                data-c-dialog-focus data-c-color="white">
+                Add/Edit an Education Credential
+            </h5>
+            <p data-c-margin="top(half)" data-c-color="white">Please complete all sections of this form.</p>
+            <button
+                data-c-dialog-action="close"
+                data-c-dialog-id="education-dialog"
+                type="button">
+                <i class="material-icons" data-c-color="white">close</i>
+            </button>
+        </div>
+        <div
+            data-c-border="bottom(thin, solid, black)"
+            data-c-padding="normal">
+            <div id="education-dialog-description">
+                <form data-c-grid="gutter">
+                    <div data-c-input="text" data-c-grid-item="tl(2of3)">
+                        <label for="TI2">Name of the Institution</label>
+                        <span>Required</span>
+                        <div>
+                            <input id="TI2" placeholder="e.g. Queen's University" required type="text" />
+                        </div>
+                        <span>This input has an error.</span>
+                    </div>
+                    <div data-c-input="text" data-c-grid-item="tl(1of3)">
+                        <label for="TI2">Student ID</label>
+                        <span>Required</span>
+                        <div>
+                            <input id="TI2" placeholder="e.g. CF43534" type="text" />
+                        </div>
+                        <span>This input has an error.</span>
+                    </div>
+                    <div data-c-input="date" data-c-grid-item="tl(1of2)">
+                        <label for="DAT2">Started Attending</label>
+                        <span>Required</span>
+                        <div>
+                            <input
+                                id="DAT2"
+                                type="date"
+                                required
+                                placeholder="yyyy-mm-dd"/>
+                        </div>
+                        <span>This input has an error.</span>
+                    </div>
+                    <div data-c-input="date" data-c-grid-item="tl(1of2)">
+                        <label for="DAT2">Finished Attending</label>
+                        <span>Required</span>
+                        <div>
+                            <input
+                                id="DAT2"
+                                type="date"
+                                required
+                                placeholder="yyyy-mm-dd"/>
+                        </div>
+                        <span>This input has an error.</span>
+                    </div>
+                    <div data-c-input="text" data-c-grid-item="tl(1of1)">
+                        <label for="TI2">Credential Type</label>
+                        <span>Required</span>
+                        <div>
+                            <input id="TI2" required placeholder="e.g. Bachelor's Degree" type="text" />
+                        </div>
+                        <span>This input has an error.</span>
+                    </div>
+                    <div data-c-input="text" data-c-grid-item="tl(1of6)">
+                        <label for="TI2">Unit/Suite</label>
+                        <span>Required</span>
+                        <div>
+                            <input id="TI2" placeholder="e.g. 14B" type="text" />
+                        </div>
+                        <span>This input has an error.</span>
+                    </div>
+                    <div data-c-input="text" data-c-grid-item="tl(1of6)">
+                        <label for="TI2">Street Number</label>
+                        <span>Required</span>
+                        <div>
+                            <input id="TI2" placeholder="e.g. 22" required type="text" />
+                        </div>
+                        <span>This input has an error.</span>
+                    </div>
+                    <div data-c-input="text" data-c-grid-item="tl(1of3)">
+                        <label for="TI2">Street Name</label>
+                        <span>Required</span>
+                        <div>
+                            <input id="TI2" placeholder="e.g. Fairmont Cr." required type="text" />
+                        </div>
+                        <span>This input has an error.</span>
+                    </div>
+                    <div data-c-input="text" data-c-grid-item="tl(1of3)">
+                        <label for="TI2">Postal Code</label>
+                        <span>Required</span>
+                        <div>
+                            <input id="TI2" placeholder="e.g. A1B2C3" required type="text" />
+                        </div>
+                        <span>This input has an error.</span>
+                    </div>
+                    
+                    <div data-c-input="select" data-c-grid-item="tl(1of3)">
+                        <label for="SEL2">Country</label>
+                        <span>Required</span>
+                        <div>
+                            <i class="material-icons">
+                                arrow_drop_down
+                            </i>
+                            <select required id="SEL2">
+                                <option disabled>Select a country...</option>
+                                <option selected>Canada</option>
+                                <option>United States of America</option>
+                            </select>
+                        </div>
+                        <span>This input has an error.</span>
+                    </div>
+                    <div data-c-input="select" data-c-grid-item="tl(1of3)">
+                        <label for="SEL2">Province or State</label>
+                        <span>Required</span>
+                        <div>
+                            <i class="material-icons">
+                                arrow_drop_down
+                            </i>
+                            <select required id="SEL2">
+                                <option disabled selected>Select a province/state...</option>
+                                <option>Alberta</option>
+<option>British Columbia</option>
+<option>Manitoba</option>
+<option>New Brunswick</option>
+<option>Newfoundland and Labrador</option>
+<option>Northwest Territories</option>
+<option>Nova Scotia</option>
+<option>Nunavut</option>
+<option>Ontario</option>
+<option>Prince Edward Island</option>
+<option>Quebec</option>
+<option>Saskatchewan</option>
+<option>Yukon</option>
+                            </select>
+                        </div>
+                        <span>This input has an error.</span>
+                    </div>
+                    <div data-c-input="text" data-c-grid-item="tl(1of3)">
+                        <label for="TI2">City or Town</label>
+                        <span>Required</span>
+                        <div>
+                            <input id="TI2" placeholder="e.g. Smallville" required type="text" />
+                        </div>
+                        <span>This input has an error.</span>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <!-- The following dialog actions can be customized depending on the dialog. -->
+        <div data-c-padding="normal">
+            <div data-c-grid="gutter middle">
+                <div data-c-grid-item="base(1of2)">
+                    <button
+                        data-c-button="outline(slow)"
+                        data-c-radius="rounded"
+                        data-c-dialog-action="close"
+                        data-c-dialog-id="education-dialog">
+                        Cancel
+                    </button>
+                </div>
+                <div
+                    data-c-grid-item="base(1of2)"
+                    data-c-alignment="base(right)">
+                    <button
+                        data-c-button="solid(go)"
+                        data-c-radius="rounded"
+                        data-c-dialog-action="close"
+                        data-c-dialog-id="education-dialog">
+                        Save Credential
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+        <div
+    aria-hidden="true"
+    aria-describedby="designation-dialog-description"
+    aria-labelledby="designation-dialog-title"
+    data-c-dialog
+    data-c-dialog-id="designation-dialog"
+    data-c-padding="top(double) bottom(double)"
+    role="dialog">
+    <div
+        data-c-background="white(100)"
+        data-c-radius="rounded"
+        data-c-margin="bottom(double)">
+        <div
+            data-c-padding="tb(normal) right(triple) left(normal)"
+            data-c-border="bottom(thin, solid, black)"
+            data-c-background="c1(100)">
+            <h5
+                data-c-font-size="h4"
+                id="designation-dialog-title"
+                data-c-dialog-focus data-c-color="white">
+                Add/Edit a Professional Designation
+            </h5>
+            <p data-c-margin="top(half)" data-c-color="white">Please complete all sections of this form.</p>
+            <button
+                data-c-dialog-action="close"
+                data-c-dialog-id="designation-dialog"
+                type="button">
+                <i class="material-icons" data-c-color="white">close</i>
+            </button>
+        </div>
+        <div
+            data-c-border="bottom(thin, solid, black)"
+            data-c-padding="normal">
+            <div id="designation-dialog-description">
+                <form data-c-grid="gutter">
+                    <div data-c-input="text" data-c-grid-item="tl(2of3)">
+                        <label for="TI2">Name of the Institution</label>
+                        <span>Required</span>
+                        <div>
+                            <input id="TI2" placeholder="e.g. Accounting Freedom" required type="text" />
+                        </div>
+                        <span>This input has an error.</span>
+                    </div>
+                    <div data-c-input="text" data-c-grid-item="tl(1of3)">
+                        <label for="TI2">Registration ID</label>
+                        <span>Required</span>
+                        <div>
+                            <input id="TI2" placeholder="e.g. CF43534" type="text" />
+                        </div>
+                        <span>This input has an error.</span>
+                    </div>
+                    <div data-c-input="date" data-c-grid-item="tl(1of3)">
+                        <label for="DAT2">Date Granted</label>
+                        <span>Required</span>
+                        <div>
+                            <input
+                                id="DAT2"
+                                type="date"
+                                required
+                                placeholder="yyyy-mm-dd"/>
+                        </div>
+                        <span>This input has an error.</span>
+                    </div>
+                    <div data-c-input="text" data-c-grid-item="tl(2of3)">
+                        <label for="TI2">Designation Type</label>
+                        <span>Required</span>
+                        <div>
+                            <input id="TI2" required placeholder="e.g. Chartered Accountant" type="text" />
+                        </div>
+                        <span>This input has an error.</span>
+                    </div>
+                    <div data-c-input="text" data-c-grid-item="tl(1of6)">
+                        <label for="TI2">Unit/Suite</label>
+                        <span>Required</span>
+                        <div>
+                            <input id="TI2" placeholder="e.g. 14B" type="text" />
+                        </div>
+                        <span>This input has an error.</span>
+                    </div>
+                    <div data-c-input="text" data-c-grid-item="tl(1of6)">
+                        <label for="TI2">Street Number</label>
+                        <span>Required</span>
+                        <div>
+                            <input id="TI2" placeholder="e.g. 22" required type="text" />
+                        </div>
+                        <span>This input has an error.</span>
+                    </div>
+                    <div data-c-input="text" data-c-grid-item="tl(1of3)">
+                        <label for="TI2">Street Name</label>
+                        <span>Required</span>
+                        <div>
+                            <input id="TI2" placeholder="e.g. Fairmont Cr." required type="text" />
+                        </div>
+                        <span>This input has an error.</span>
+                    </div>
+                    <div data-c-input="text" data-c-grid-item="tl(1of3)">
+                        <label for="TI2">Postal Code</label>
+                        <span>Required</span>
+                        <div>
+                            <input id="TI2" placeholder="e.g. A1B2C3" required type="text" />
+                        </div>
+                        <span>This input has an error.</span>
+                    </div>
+                    
+                    <div data-c-input="select" data-c-grid-item="tl(1of3)">
+                        <label for="SEL2">Country</label>
+                        <span>Required</span>
+                        <div>
+                            <i class="material-icons">
+                                arrow_drop_down
+                            </i>
+                            <select required id="SEL2">
+                                <option disabled>Select a country...</option>
+                                <option selected>Canada</option>
+                                <option>United States of America</option>
+                            </select>
+                        </div>
+                        <span>This input has an error.</span>
+                    </div>
+                    <div data-c-input="select" data-c-grid-item="tl(1of3)">
+                        <label for="SEL2">Province or State</label>
+                        <span>Required</span>
+                        <div>
+                            <i class="material-icons">
+                                arrow_drop_down
+                            </i>
+                            <select required id="SEL2">
+                                <option disabled selected>Select a province/state...</option>
+                                <option>Alberta</option>
+<option>British Columbia</option>
+<option>Manitoba</option>
+<option>New Brunswick</option>
+<option>Newfoundland and Labrador</option>
+<option>Northwest Territories</option>
+<option>Nova Scotia</option>
+<option>Nunavut</option>
+<option>Ontario</option>
+<option>Prince Edward Island</option>
+<option>Quebec</option>
+<option>Saskatchewan</option>
+<option>Yukon</option>
+                            </select>
+                        </div>
+                        <span>This input has an error.</span>
+                    </div>
+                    <div data-c-input="text" data-c-grid-item="tl(1of3)">
+                        <label for="TI2">City or Town</label>
+                        <span>Required</span>
+                        <div>
+                            <input id="TI2" placeholder="e.g. Smallville" required type="text" />
+                        </div>
+                        <span>This input has an error.</span>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <!-- The following dialog actions can be customized depending on the dialog. -->
+        <div data-c-padding="normal">
+            <div data-c-grid="gutter middle">
+                <div data-c-grid-item="base(1of2)">
+                    <button
+                        data-c-button="outline(slow)"
+                        data-c-radius="rounded"
+                        data-c-dialog-action="close"
+                        data-c-dialog-id="designation-dialog">
+                        Cancel
+                    </button>
+                </div>
+                <div
+                    data-c-grid-item="base(1of2)"
+                    data-c-alignment="base(right)">
+                    <button
+                        data-c-button="solid(go)"
+                        data-c-radius="rounded"
+                        data-c-dialog-action="close"
+                        data-c-dialog-id="designation-dialog">
+                        Save Designation
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
         <div
     aria-hidden="true"
     aria-describedby="record-dialog-description"
