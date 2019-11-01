@@ -340,3 +340,30 @@ $("[data-gc-reference-work-false-trigger]").on("click", function() {
         $("[data-gc-reference-work-true]").addClass("hidden");
     }
 });
+
+// Record
+$("[data-gc-record-true-trigger]").on("click", function() {
+    if ($(this).hasClass("active")) {
+
+    } else {
+        // Triger this elements stuff.
+        $(this).addClass("active");
+        $("[data-gc-record-true]").removeClass("hidden");
+        // Remove alternative option's stuff.
+        $("[data-gc-record-false-trigger]").removeClass("active");
+        $("[data-gc-record-false]").addClass("hidden");
+    }
+});
+
+$("[data-gc-record-false-trigger]").on("click", function() {
+    if ($(this).hasClass("active")) {
+
+    } else {
+        // Triger this elements stuff.
+        $(this).addClass("active");
+        $("[data-gc-record-false]").removeClass("hidden");
+        // Remove alternative option's stuff.
+        $("[data-gc-record-true-trigger]").removeClass("active");
+        $("[data-gc-record-true]").addClass("hidden");
+    }
+});

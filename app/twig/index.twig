@@ -128,7 +128,7 @@
             </div>
         </div>
 
-        <footer data-c-alignment="base(centre)" data-c-background="grey(10)" data-c-padding="top(double) bottom(double)">
+        <footer data-c-alignment="base(centre)" data-c-background="grey(10)" data-c-padding="top(double) bottom(double)" data-c-border="top(thin, solid, gray)">
             <div data-c-container="full">
                 <div data-c-grid="gutter middle">
                     <div data-c-alignment="tp(left)" data-c-grid-item="tp(5of7)">
@@ -179,7 +179,11 @@
 
         {% include "templates/dialogs/legal-name.twig" %}
         {% include "templates/dialogs/residence.twig" %}
+        {% include "templates/dialogs/experience.twig" %}
         {% include "templates/dialogs/reference.twig" %}
+        {% include "templates/dialogs/education.twig" %}
+        {% include "templates/dialogs/recognition.twig" %}
+        {% include "templates/dialogs/record.twig" %}
 
         {# Clone's JavaScript #}
         <script src="$ROOT/js/clone/clone.min.js"></script>
