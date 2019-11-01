@@ -234,6 +234,11 @@ $clone-grid-gutter: $clone-padding;
             }
         }
     }
+    .reference {
+        cursor: pointer;
+        height: 100%;
+        width: 100%;
+    }
     footer {
         flex-direction: row;
     }

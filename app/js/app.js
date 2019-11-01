@@ -301,3 +301,42 @@ $("[data-gc-naturalization-application-false-trigger]").on("click", function() {
             $("[data-gc-screen-denied-true]").addClass("hidden");
         }
     });
+
+// Current Address =============================================================
+$("[data-gc-current-address-trigger]").on("click", function() {
+    if ($(this).hasClass("active")) {
+        $(this).removeClass("active");
+        $("[data-gc-current-address]").removeClass("hidden");
+    } else {
+        // Triger this elements stuff.
+        $(this).addClass("active");
+        $("[data-gc-current-address]").addClass("hidden");
+    }
+});
+
+// Reference Work/Education
+$("[data-gc-reference-work-true-trigger]").on("click", function() {
+    if ($(this).hasClass("active")) {
+
+    } else {
+        // Triger this elements stuff.
+        $(this).addClass("active");
+        $("[data-gc-reference-work-true]").removeClass("hidden");
+        // Remove alternative option's stuff.
+        $("[data-gc-reference-work-false-trigger]").removeClass("active");
+        $("[data-gc-reference-work-false]").addClass("hidden");
+    }
+});
+
+$("[data-gc-reference-work-false-trigger]").on("click", function() {
+    if ($(this).hasClass("active")) {
+
+    } else {
+        // Triger this elements stuff.
+        $(this).addClass("active");
+        $("[data-gc-reference-work-false]").removeClass("hidden");
+        // Remove alternative option's stuff.
+        $("[data-gc-reference-work-true-trigger]").removeClass("active");
+        $("[data-gc-reference-work-true]").addClass("hidden");
+    }
+});
