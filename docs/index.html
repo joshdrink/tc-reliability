@@ -465,20 +465,8 @@
                 </div>
             </div>
         </div>
-        <div data-c-grid-item="base(1of1)">
-            <p data-c-margin="bottom(normal)">
-                By consenting, you agree to the following:
-            </p>
-            <ul data-c-margin="bottom(normal)">
-                <li>Verification of identity and background</li>
-                <li>Verification of educational and professional credentials</li>
-                <li>Verifications of personal and professional references</li>
-                <li>Law enforcement inquiry (criminal record check)</li>
-                <li>Financial inquiry (credit check)</li>
-            </ul>
-        </div>
         <div data-c-input="radio" data-c-grid-item="base(1of1)">
-            <label for="consentAgeSelection">Please confirm your age:</label>
+            <label for="consentAgeSelection">Before consenting, please confirm your age:</label>
             <span>Required</span>
             <div id="consentAgeSelection" role="radiogroup">
                 <label for="consentAgeUnder" data-gc-parent-guardian-consent-trigger>
@@ -491,6 +479,18 @@
                 </label>
             </div>
             <span>This input has an error.</span>
+        </div>
+        <div data-c-grid-item="base(1of1)">
+            <p data-c-margin="bottom(normal)">
+                By consenting, you agree to the following:
+            </p>
+            <ul data-c-margin="bottom(normal)">
+                <li>Verification of identity and background</li>
+                <li>Verification of educational and professional credentials</li>
+                <li>Verifications of personal and professional references</li>
+                <li>Law enforcement inquiry (criminal record check)</li>
+                <li>Financial inquiry (credit check)</li>
+            </ul>
         </div>
         
         <div data-gc-personal-consent data-c-input="checkbox(group)" class="hidden" data-c-grid-item="base(1of1)">
@@ -511,7 +511,7 @@
         <div data-gc-parent-guardian-consent class="hidden" data-c-grid-item="base(1of1)">
             <div data-c-grid="gutter">
                 <div data-c-grid-item="base(1of1)">
-                    <p data-c-margin="bottom(normal)">You may give your consent only if you have reached the age of 18. As you are under 18, your parent or guardian must give consent.</p>
+                    <p data-c-margin="bottom(normal)">As you are under 18, your parent or guardian must also give consent.</p>
                 </div>
                 <div data-c-input="text" data-c-grid-item="tl(2of3)">
                     <label for="TI2">Applicant's Name</label>
@@ -2179,7 +2179,7 @@
                 <ul data-c-margin="bottom(1)">
                     <li>This form is not functional and cannot be completed, saved, or submitted.</li>
                     <li>Forms inside of modals/dialogs will not save or update information in the form.</li>
-                    <li>All areas of the form have working decision trees and represent the real information that would be collected.</li>
+                    <li>The form will show and hide sections based on the choices you make.</li>
                     <li>The copywriting is subject to change and may not be accurate.</li>
                     <li>Some areas of the form have been completed with fake information to give a visual representation of what they might look like when completed.</li>
                 </ul>
