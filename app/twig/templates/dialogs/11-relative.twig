@@ -1,0 +1,378 @@
+<div
+    aria-hidden="true"
+    aria-describedby="relative-dialog-description"
+    aria-labelledby="relative-dialog-title"
+    data-c-dialog
+    data-c-dialog-id="relative-dialog"
+    data-c-padding="top(double) bottom(double)"
+    role="dialog">
+    <div
+        data-c-background="white(100)"
+        data-c-radius="rounded"
+        data-c-margin="bottom(double)">
+        <div
+            data-c-padding="tb(normal) right(triple) left(normal)"
+            data-c-border="bottom(thin, solid, black)"
+            data-c-background="c1(100)">
+            <h5
+                data-c-font-size="h4"
+                id="relative-dialog-title"
+                data-c-dialog-focus data-c-color="white">
+                Add/Edit an Immediate Relative
+            </h5>
+            <p data-c-margin="top(half)" data-c-color="white">Please complete all required sections of this form.</p>
+            <button
+                data-c-dialog-action="close"
+                data-c-dialog-id="relative-dialog"
+                type="button">
+                <i class="material-icons" data-c-color="white">close</i>
+            </button>
+        </div>
+        <div
+            data-c-border="bottom(thin, solid, black)"
+            data-c-padding="normal">
+            <div id="reference-dialog-description">
+                <form data-c-grid="gutter">
+                    <div data-c-grid-item="base(1of1)">
+                        <p data-c-font-weight="bold">Basic Information</p>
+                    </div>
+                    {# Surname #}
+                    <div data-c-input="text" data-c-grid-item="tl(1of3)">
+                        <label for="TI2">Surname</label>
+                        <span>Required</span>
+                        <div>
+                            <input id="TI2" placeholder="e.g. Olsen" required type="text" />
+                        </div>
+                        <span>This input has an error.</span>
+                    </div>
+                    {# Given Names #}
+                    <div data-c-input="text" data-c-grid-item="tl(1of3)">
+                        <label for="TI2">Given Names</label>
+                        <span>Required</span>
+                        <div>
+                            <input id="TI2" placeholder="e.g. Jimmy" required type="text" />
+                        </div>
+                        <span>This input has an error.</span>
+                    </div>
+                    {# Surname at Birth #}
+                    <div data-c-input="text" data-c-grid-item="tl(1of3)">
+                        <label for="TI2">Surname at Birth</label>
+                        <span>Required</span>
+                        <div>
+                            <input id="TI2" placeholder="e.g. Jackson" type="text" />
+                        </div>
+                        <span>This input has an error.</span>
+                    </div>
+                    {# Relationship #}
+                    <div data-c-input="text" data-c-grid-item="tl(1of3)">
+                        <label for="TI2">Relationship</label>
+                        <span>Required</span>
+                        <div>
+                            <input id="TI2" placeholder="e.g. Coworker" type="text" />
+                        </div>
+                        <span>This input has an error.</span>
+                    </div>
+                    {# Date of Birth #}
+                    <div data-c-input="date" data-c-grid-item="tl(1of3)">
+                        <label for="DAT2">Date of Birth</label>
+                        <span>Required</span>
+                        <div>
+                            <input id="DAT2" type="date" placeholder="yyyy-mm-dd"/>
+                        </div>
+                        <span>This input has an error.</span>
+                    </div>
+                    {# Date of Death #}
+                    <div data-c-input="date" data-c-grid-item="tl(1of3)">
+                        <label for="DAT2">Date of Death</label>
+                        <span>Required</span>
+                        <div>
+                            <input id="DAT2" type="date" placeholder="yyyy-mm-dd"/>
+                        </div>
+                        <span>This input has an error.</span>
+                    </div>
+                    {# Current Citizenships #}
+                    <div data-c-input="textarea" data-c-grid-item="base(1of1)">
+                        <label for="TA2">Current Citizenships</label>
+                        <span>Required</span>
+                        <div>
+                            <textarea id="TA2"></textarea>
+                        </div>
+                        <span>This input has an error.</span>
+                    </div>
+                    {# Place of Birth #}
+                    <div data-c-grid-item="base(1of1)">
+                        <p data-c-font-weight="bold">Relative's Place of Birth</p>
+                    </div>
+                    <div data-c-input="select" data-c-grid-item="tl(1of3)">
+                        <label for="SEL2">Country</label>
+                        <span>Required</span>
+                        <div>
+                            <i class="material-icons">
+                                arrow_drop_down
+                            </i>
+                            <select id="SEL2">
+                                <option disabled>Select a country...</option>
+                                <option selected>Canada</option>
+                                <option>United States of America</option>
+                            </select>
+                        </div>
+                        <span>This input has an error.</span>
+                    </div>
+                    <div data-c-input="select" data-c-grid-item="tl(1of3)">
+                        <label for="SEL2">Province or State</label>
+                        <span>Required</span>
+                        <div>
+                            <i class="material-icons">
+                                arrow_drop_down
+                            </i>
+                            <select id="SEL2">
+                                <option disabled selected>Select a province/state...</option>
+                                {% include "../partials/provinces.twig" %}
+                            </select>
+                        </div>
+                        <span>This input has an error.</span>
+                    </div>
+                    <div data-c-input="text" data-c-grid-item="tl(1of3)">
+                        <label for="TI2">City or Town</label>
+                        <span>Required</span>
+                        <div>
+                            <input id="TI2" placeholder="e.g. Smallville" type="text" />
+                        </div>
+                        <span>This input has an error.</span>
+                    </div>
+                    {# Current Address #}
+                    <div data-c-grid-item="base(1of1)">
+                        <p data-c-font-weight="bold">Relative's Current Address</p>
+                    </div>
+                    <div data-c-input="text" data-c-grid-item="tl(1of6)">
+                        <label for="TI2">Unit/Suite</label>
+                        <span>Required</span>
+                        <div>
+                            <input id="TI2" placeholder="e.g. 14B" type="text" />
+                        </div>
+                        <span>This input has an error.</span>
+                    </div>
+                    <div data-c-input="text" data-c-grid-item="tl(1of6)">
+                        <label for="TI2">Street#</label>
+                        <span>Required</span>
+                        <div>
+                            <input id="TI2" placeholder="e.g. 22" type="text" />
+                        </div>
+                        <span>This input has an error.</span>
+                    </div>
+                    <div data-c-input="text" data-c-grid-item="tl(1of3)">
+                        <label for="TI2">Street Name</label>
+                        <span>Required</span>
+                        <div>
+                            <input id="TI2" placeholder="e.g. Fairmont Cr." type="text" />
+                        </div>
+                        <span>This input has an error.</span>
+                    </div>
+                    <div data-c-input="text" data-c-grid-item="tl(1of3)">
+                        <label for="TI2">Postal Code</label>
+                        <span>Required</span>
+                        <div>
+                            <input id="TI2" placeholder="e.g. A1B2C3" type="text" />
+                        </div>
+                        <span>This input has an error.</span>
+                    </div>
+                    <div data-c-input="select" data-c-grid-item="tl(1of3)">
+                        <label for="SEL2">Country</label>
+                        <span>Required</span>
+                        <div>
+                            <i class="material-icons">
+                                arrow_drop_down
+                            </i>
+                            <select id="SEL2">
+                                <option disabled>Select a country...</option>
+                                <option selected>Canada</option>
+                                <option>United States of America</option>
+                            </select>
+                        </div>
+                        <span>This input has an error.</span>
+                    </div>
+                    <div data-c-input="select" data-c-grid-item="tl(1of3)">
+                        <label for="SEL2">Province or State</label>
+                        <span>Required</span>
+                        <div>
+                            <i class="material-icons">
+                                arrow_drop_down
+                            </i>
+                            <select id="SEL2">
+                                <option disabled selected>Select a province/state...</option>
+                                {% include "../partials/provinces.twig" %}
+                            </select>
+                        </div>
+                        <span>This input has an error.</span>
+                    </div>
+                    <div data-c-input="text" data-c-grid-item="tl(1of3)">
+                        <label for="TI2">City or Town</label>
+                        <span>Required</span>
+                        <div>
+                            <input id="TI2" placeholder="e.g. Smallville" type="text" />
+                        </div>
+                        <span>This input has an error.</span>
+                    </div>              
+                    <div data-c-input="date" data-c-grid-item="tl(1of3)">
+                        <label for="DAT2">Date They Moved Here</label>
+                        <span>Required</span>
+                        <div>
+                            <input id="DAT2" type="date" placeholder="yyyy-mm-dd"/>
+                        </div>
+                        <span>This input has an error.</span>
+                    </div>
+                    <div data-c-input="telephone" data-c-grid-item="tl(1of3)">
+                        <label for="TI2">Personal Phone</label>
+                        <span>Required</span>
+                        <div>
+                            <input id="TI2" placeholder="e.g. 555-555-5555" type="tel" />
+                        </div>
+                        <span>This input has an error.</span>
+                    </div>
+                    <div data-c-input="email" data-c-grid-item="tl(1of3)">
+                        <label for="EM2">Personal Email</label>
+                        <span>Required</span>
+                        <div>
+                            <input id="EM2" placeholder="e.g. jimmy23@metropolis.com" type="email" />
+                        </div>
+                        <span>This input has an error.</span>
+                    </div>
+                    {# Current Employer #}
+                    <div data-c-grid-item="base(1of1)">
+                        <p data-c-font-weight="bold">Relative's Employer or Education Institution</p>
+                    </div>
+                    <div data-c-input="text" data-c-grid-item="tl(1of2)">
+                        <label for="TI2">Name of Employer or Institution</label>
+                        <span>Required</span>
+                        <div>
+                            <input id="TI2" placeholder="e.g. The Daily Planet" type="text" />
+                        </div>
+                        <span>This input has an error.</span>
+                    </div>
+                    <div data-c-input="text" data-c-grid-item="tl(1of2)">
+                        <label for="TI2">Job Title or Field of Study</label>
+                        <span>Required</span>
+                        <div>
+                            <input id="TI2" placeholder="e.g. Photographer" type="text" />
+                        </div>
+                        <span>This input has an error.</span>
+                    </div>
+                    <div data-c-input="telephone" data-c-grid-item="tl(1of2)">
+                        <label for="TI2">Work Phone</label>
+                        <span>Required</span>
+                        <div>
+                            <input id="TI2" placeholder="e.g. 555-555-5555" type="tel" />
+                        </div>
+                        <span>This input has an error.</span>
+                    </div>
+                    <div data-c-input="email" data-c-grid-item="tl(1of2)">
+                        <label for="EM2">Work Email</label>
+                        <span>Required</span>
+                        <div>
+                            <input id="EM2" placeholder="e.g. james@dailyplanet.com" type="email" />
+                        </div>
+                        <span>This input has an error.</span>
+                    </div>
+                    <div data-c-input="text" data-c-grid-item="tl(1of6)">
+                        <label for="TI2">Unit/Suite</label>
+                        <span>Required</span>
+                        <div>
+                            <input id="TI2" placeholder="e.g. 14B" type="text" />
+                        </div>
+                        <span>This input has an error.</span>
+                    </div>
+                    <div data-c-input="text" data-c-grid-item="tl(1of6)">
+                        <label for="TI2">Street#</label>
+                        <span>Required</span>
+                        <div>
+                            <input id="TI2" placeholder="e.g. 22" type="text" />
+                        </div>
+                        <span>This input has an error.</span>
+                    </div>
+                    <div data-c-input="text" data-c-grid-item="tl(2of3)">
+                        <label for="TI2">Street Name</label>
+                        <span>Required</span>
+                        <div>
+                            <input id="TI2" placeholder="e.g. Fairmont Cr." type="text" />
+                        </div>
+                        <span>This input has an error.</span>
+                    </div>
+                    <div data-c-input="select" data-c-grid-item="tl(1of3)">
+                        <label for="SEL2">Country</label>
+                        <span>Required</span>
+                        <div>
+                            <i class="material-icons">
+                                arrow_drop_down
+                            </i>
+                            <select id="SEL2">
+                                <option disabled>Select a country...</option>
+                                <option selected>Canada</option>
+                                <option>United States of America</option>
+                            </select>
+                        </div>
+                        <span>This input has an error.</span>
+                    </div>
+                    <div data-c-input="select" data-c-grid-item="tl(1of3)">
+                        <label for="SEL2">Province or State</label>
+                        <span>Required</span>
+                        <div>
+                            <i class="material-icons">
+                                arrow_drop_down
+                            </i>
+                            <select id="SEL2">
+                                <option disabled selected>Select a province/state...</option>
+                                {% include "../partials/provinces.twig" %}
+                            </select>
+                        </div>
+                        <span>This input has an error.</span>
+                    </div>
+                    <div data-c-input="text" data-c-grid-item="tl(1of3)">
+                        <label for="TI2">City or Town</label>
+                        <span>Required</span>
+                        <div>
+                            <input id="TI2" placeholder="e.g. Smallville" type="text" />
+                        </div>
+                        <span>This input has an error.</span>
+                    </div>
+                    {# Omitted Info Reasoning #}
+                    <div data-c-grid-item="base(1of1)">
+                        <p data-c-font-weight="bold">If you do not know any or all of the information requested in this section and you cannot obtain this information, explain why.</p>
+                    </div>
+                    <div data-c-input="textarea" data-c-grid-item="base(1of1)">
+                        <label for="TA2">I cannot answer the omitted information above because...</label>
+                        <span>Required</span>
+                        <div>
+                            <textarea id="TA2"></textarea>
+                        </div>
+                        <span>This input has an error.</span>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <!-- The following dialog actions can be customized depending on the dialog. -->
+        <div data-c-padding="normal">
+            <div data-c-grid="gutter middle">
+                <div data-c-grid-item="base(1of2)">
+                    <button
+                        data-c-button="outline(slow)"
+                        data-c-radius="rounded"
+                        data-c-dialog-action="close"
+                        data-c-dialog-id="relative-dialog">
+                        Cancel
+                    </button>
+                </div>
+                <div
+                    data-c-grid-item="base(1of2)"
+                    data-c-alignment="base(right)">
+                    <button
+                        data-c-button="solid(go)"
+                        data-c-radius="rounded"
+                        data-c-dialog-action="close"
+                        data-c-dialog-id="relative-dialog">
+                        Save Immediate Relative
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

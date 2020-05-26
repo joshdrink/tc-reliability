@@ -1,0 +1,112 @@
+<div id="sectionTravel" class="hidden">
+    <div data-c-grid="gutter(all, 1)">
+        <div data-c-grid-item="base(1of1)">
+            <span id="travel"></span>
+            <h2 data-gc-section-status="complete" data-c-margin="top(3)" data-c-heading="h2" data-c-padding="bottom(1)">
+                <i class="material-icons">error</i>
+                <i class="material-icons">warning</i>
+                <i class="material-icons">check_circle</i>
+                Foreign Travel
+            </h2>
+        </div>
+        {# Travel Confirmation #}
+        <div data-c-input="radio" data-c-grid-item="base(1of1)">
+            <label for="travelConfirmation">Have you travelled outside of Canada, the United States of America or Mexico for personal reasons or non-government business <span data-c-font-weight="bold">in the last 5 years</span>?</label>
+            <span>Required</span>
+            <div id="travelConfirmation" role="radiogroup">
+                <label for="travelConfirmationYes" data-gc-travel-true-trigger>
+                    <input id="travelConfirmationYes" required checked name="travelConfirmation" type="radio" />
+                    <span>Yes</span>
+                </label>
+                <label for="travelConfirmationNo" data-gc-travel-false-trigger>
+                    <input id="travelConfirmationNo" required name="travelConfirmation" type="radio" />
+                    <span>No</span>
+                </label>
+            </div>
+            <span>This input has an error.</span>
+        </div>
+        {# Travel Locations #}
+        <div data-c-grid-item="base(1of1)" data-gc-travel-true>
+            <p data-c-margin="bottom(normal)">Please provide details for all travel locations in the last 5 years below. You can add a travel location by clicking the button and completing the form.</p>
+            <div data-gc-residence data-c-margin="bottom(double)">
+                {# <div data-gc-residence-null data-c-border="all(thin, solid, gray)" data-c-background="gray(10)" data-c-radius="rounded" data-c-padding="normal" data-c-align="base(center)">
+                    <p>You haven't added any information yet.</p>
+                </div> #}
+                <div data-c-border="all(thin, solid, c1)" data-c-background="c1(10)" data-c-radius="rounded" data-c-margin="top(1)">
+                    <div data-c-padding="normal" data-c-border="bottom(thin, solid, c1)">
+                        <div data-c-grid="gutter middle">
+                            <div data-c-grid-item="base(1of2)">
+                                <p data-c-font-weight="bold">Travel to Spain</p>
+                                <p>May 1st 2018 - June 1st 2018</p>
+                            </div>
+                            <div data-c-grid-item="base(1of2)" data-c-align="base(right)">
+                                <button title="This button is disabled for demo purposes." type="button" data-c-button="reset" data-c-font-style="underline" data-c-margin="right(normal)">Edit</button>
+                                <button title="This button is disabled for demo purposes." type="button" data-c-button="reset" data-c-font-style="underline">Remove</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div data-c-padding="normal">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque blandit placerat iaculis. Phasellus accumsan iaculis massa et tristique. Sed nec auctor tortor. Praesent massa neque, mollis efficitur fermentum eu, congue interdum turpis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque blandit placerat iaculis. Phasellus accumsan iaculis massa et tristique. Sed nec auctor tortor. Praesent massa neque, mollis efficitur fermentum eu, congue interdum turpis.</p>
+                    </div>
+                </div>
+                {# Repeated for visual example. #}
+                <div data-c-border="all(thin, solid, c1)" data-c-background="c1(10)" data-c-radius="rounded" data-c-margin="top(1)">
+                    <div data-c-padding="normal" data-c-border="bottom(thin, solid, c1)">
+                        <div data-c-grid="gutter middle">
+                            <div data-c-grid-item="base(1of2)">
+                                <p data-c-font-weight="bold">Travel to Italy</p>
+                                <p>January 1st 2017 - March 1st 2017</p>
+                            </div>
+                            <div data-c-grid-item="base(1of2)" data-c-align="base(right)">
+                                <button title="This button is disabled for demo purposes." type="button" data-c-button="reset" data-c-font-style="underline" data-c-margin="right(normal)">Edit</button>
+                                <button title="This button is disabled for demo purposes." type="button" data-c-button="reset" data-c-font-style="underline">Remove</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div data-c-padding="normal">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque blandit placerat iaculis. Phasellus accumsan iaculis massa et tristique. Sed nec auctor tortor. Praesent massa neque, mollis efficitur fermentum eu, congue interdum turpis.</p>
+                    </div>
+                </div>
+                <div data-c-border="all(thin, solid, c1)" data-c-background="c1(10)" data-c-radius="rounded" data-c-margin="top(1)">
+                    <div data-c-padding="normal" data-c-border="bottom(thin, solid, c1)">
+                        <div data-c-grid="gutter middle">
+                            <div data-c-grid-item="base(1of2)">
+                                <p data-c-font-weight="bold">Travel to The United States</p>
+                                <p>November 1st 2017 - December 15th 2017</p>
+                            </div>
+                            <div data-c-grid-item="base(1of2)" data-c-align="base(right)">
+                                <button title="This button is disabled for demo purposes." type="button" data-c-button="reset" data-c-font-style="underline" data-c-margin="right(normal)">Edit</button>
+                                <button title="This button is disabled for demo purposes." type="button" data-c-button="reset" data-c-font-style="underline">Remove</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div data-c-padding="normal">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque blandit placerat iaculis. Phasellus accumsan iaculis massa et tristique. Sed nec auctor tortor. Praesent massa neque, mollis efficitur fermentum eu, congue interdum turpis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque blandit placerat iaculis. Phasellus accumsan iaculis massa et tristique. Sed nec auctor tortor. Praesent massa neque, mollis efficitur fermentum eu, congue interdum turpis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque blandit placerat iaculis. Phasellus accumsan iaculis massa et tristique. Sed nec auctor tortor. Praesent massa neque, mollis efficitur fermentum eu, congue interdum turpis.</p>
+                    </div>
+                </div>
+                <div data-c-border="all(thin, solid, c1)" data-c-background="c1(10)" data-c-radius="rounded" data-c-margin="top(1)">
+                    <div data-c-padding="normal" data-c-border="bottom(thin, solid, c1)">
+                        <div data-c-grid="gutter middle">
+                            <div data-c-grid-item="base(1of2)">
+                                <p data-c-font-weight="bold">Travel to Mexico</p>
+                                <p>October 21st 2015 - November 12th 2015</p>
+                            </div>
+                            <div data-c-grid-item="base(1of2)" data-c-align="base(right)">
+                                <button title="This button is disabled for demo purposes." type="button" data-c-button="reset" data-c-font-style="underline" data-c-margin="right(normal)">Edit</button>
+                                <button title="This button is disabled for demo purposes." type="button" data-c-button="reset" data-c-font-style="underline">Remove</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div data-c-padding="normal">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque blandit placerat iaculis. Phasellus accumsan iaculis massa et tristique. Sed nec auctor tortor. Praesent massa neque, mollis efficitur fermentum eu, congue interdum turpis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque blandit placerat iaculis. Phasellus accumsan iaculis massa et tristique. Sed nec auctor tortor. Praesent massa neque, mollis efficitur fermentum eu, congue interdum turpis.</p>
+                    </div>
+                </div>
+            </div>
+            <div data-c-align="base(right)">
+                <button data-c-button="solid(c1)" data-c-radius="rounded" data-c-dialog-id="travel-dialog" data-c-dialog-action="open" type="button">
+                    Add a Travel Location
+                </button>
+            </div>
+        </div>
+    </div>
+</div>

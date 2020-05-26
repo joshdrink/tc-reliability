@@ -1,0 +1,154 @@
+<div id="sectionMaritalStatus" class="hidden">
+    <div data-c-grid="gutter(all, 1)">
+        <div data-c-grid-item="base(1of1)">
+            <span id="maritalStatus"></span>
+            <h2 data-gc-section-status="incomplete" data-c-margin="top(3) bottom(1)" data-c-heading="h2" data-c-padding="bottom(1)">
+                <i class="material-icons">error</i>
+                <i class="material-icons">warning</i>
+                <i class="material-icons">check_circle</i>
+                Marital Status
+            </h2>
+        </div>
+        {# Marital Status #}
+        <div data-c-input="radio" data-c-grid-item="base(1of1)">
+            <label for="maritalStatus">What is your current relationship status?</label>
+            <span>Required</span>
+            <div id="maritalStatus" role="radiogroup">
+                <label for="maritalStatusMarried" data-gc-marriage-trigger>
+                    <input id="maritalStatusMarried" required name="maritalStatus" type="radio" />
+                    <span>Married</span>
+                </label>
+                <label for="maritalStatusCommonLaw" data-gc-common-law-trigger>
+                    <input id="maritalStatusCommonLaw" required name="maritalStatus" type="radio" />
+                    <span>Common Law</span>
+                </label>
+                <label for="maritalStatusWidowed" data-gc-widowed-trigger>
+                    <input id="maritalStatusWidowed" required name="maritalStatus" type="radio" />
+                    <span>Widowed</span>
+                </label>
+                <label for="maritalStatusSeparated" data-gc-separated-trigger>
+                    <input id="maritalStatusSeparated" required name="maritalStatus" type="radio" />
+                    <span>Separated</span>
+                </label>
+                <label for="maritalStatusDivorced" data-gc-divorced-trigger>
+                    <input id="maritalStatusDivorced" required name="maritalStatus" type="radio" />
+                    <span>Divorced</span>
+                </label>
+                <label for="maritalStatusSingle" data-gc-single-trigger>
+                    <input id="maritalStatusSingle" required name="maritalStatus" type="radio" />
+                    <span>Single</span>
+                </label>
+            </div>
+            <span>This input has an error.</span>
+        </div>
+        {# Married w/ Previous #}
+        <div data-c-input="radio" data-c-grid-item="base(1of1)" data-gc-married-previous class="hidden">
+            <label for="marriedWithPrevious">Have you been married / common law with someone else who isn't your current spouse / common law partner in the last 10 years?</label>
+            <span>Required</span>
+            <div id="marriedWithPrevious" role="radiogroup">
+                <label for="marriedWithPreviousYes" data-gc-married-previous-true-trigger>
+                    <input id="marriedWithPreviousYes" required name="marriedWithPrevious" type="radio" />
+                    <span>Yes</span>
+                </label>
+                <label for="marriedWithPreviousNo" data-gc-married-previous-false-trigger>
+                    <input id="marriedWithPreviousNo" required name="marriedWithPrevious" type="radio" />
+                    <span>No</span>
+                </label>
+            </div>
+            <span>This input has an error.</span>
+        </div>
+        {# Date of Death #}    
+        <div data-c-input="date" data-c-grid-item="base(1of1)" data-gc-date-death class="hidden">
+            <label for="dateOfDeath">Date of Death</label>
+            <span>Required</span>
+            <div>
+                <input id="dateOfDeath" type="date" required placeholder="yyyy-mm-dd"/>
+            </div>
+            <span>This input has an error.</span>
+        </div>
+        {# Date of Separation #}
+        <div data-c-input="date" data-c-grid-item="base(1of1)" data-gc-date-separation class="hidden">
+            <label for="dateOfSeparation">Date of Separation</label>
+            <span>Required</span>
+            <div>
+                <input id="dateOfSeparation" type="date" required placeholder="yyyy-mm-dd"/>
+            </div>
+            <span>This input has an error.</span>
+        </div>
+        {# Date of Divorce #}
+        <div data-c-input="date" data-c-grid-item="base(1of1)" data-gc-date-divorce class="hidden">
+            <label for="dateOfDivorce">Date of Divorce</label>
+            <span>Required</span>
+            <div>
+                <input id="dateOfDivorce" type="date" required placeholder="yyyy-mm-dd"/>
+            </div>
+            <span>This input has an error.</span>
+        </div>
+        {# Single w/ Previous #}
+        <div data-c-input="radio" data-c-grid-item="base(1of1)" data-gc-single-previous class="hidden">
+            <label for="singleWithPrevious">Have you been married / common law with someone in the last 10 years?</label>
+            <span>Required</span>
+            <div id="singleWithPrevious" role="radiogroup">
+                <label for="singleWithPreviousYes" data-gc-single-previous-true-trigger>
+                    <input id="singleWithPreviousYes" required name="singleWithPrevious" type="radio" />
+                    <span>Yes</span>
+                </label>
+                <label for="singleWithPreviousNo" data-gc-single-previous-false-trigger>
+                    <input id="singleWithPreviousNo" required name="singleWithPrevious" type="radio" />
+                    <span>No</span>
+                </label>
+            </div>
+            <span>This input has an error.</span>
+        </div>
+        {# Current Spouse #}
+        <div data-c-grid-item="base(1of1)" data-gc-current-spouse class="hidden">
+            <h3 data-c-heading="h3" data-c-margin="top(2) bottom(1)">Current Spouse / Common Law Partner</h3>
+            <p data-c-margin="bottom(.5)">Your spouse or common-law partner is a person who is:</p>
+            <ul data-c-margin="bottom(1)">
+                <li>not an immediate relative as defined in the "Relatives" section of this form</li>
+                <li>in a conjugal relationship with you</li>
+            </ul>
+            <p data-c-margin="bottom(.5)">Your spouse or common-law partner may be:</p>
+            <ul data-c-margin="bottom(1)">
+                <li>cohabiting with you or not</li>
+                <li>of any gender</li>
+            </ul>
+            <p data-c-margin="bottom(1)">The duration of the relationship is not taken into account.</p>
+            <div data-c-margin="bottom(double)">
+                <div data-c-border="all(thin, solid, gray)" data-c-background="gray(10)" data-c-radius="rounded" data-c-padding="normal" data-c-align="base(center)">
+                    <p>You haven't added any information yet.</p>
+                </div>
+            </div>
+            <div data-c-align="base(right)">
+                <button data-c-button="solid(c1)" data-c-radius="rounded" data-c-dialog-id="current-spouse-dialog" data-c-dialog-action="open" type="button">
+                    Add Your Current Spouse / Common Law Partner
+                </button>
+            </div>
+        </div>
+        {# Former Spouses #}
+        <div data-c-grid-item="base(1of1)" data-gc-former-spouse class="hidden">
+            <h3 data-c-heading="h3" data-c-margin="top(2) bottom(1)">Former Spouse(s) / Common Law Partner(s)</h3>
+            <p data-c-margin="bottom(.5)">Please add all former spouses or common law partners you've had in <span data-c-font-weight="bold">the last 10 years</span> including separations, divorce, and deaths. Your former spouse(s) or common-law partner(s) are people who:</p>
+            <ul data-c-margin="bottom(1)">
+                <li>are not an immediate relative as defined in the "Relatives" section of this form</li>
+                <li>were in a conjugal relationship with you</li>
+            </ul>
+            <p data-c-margin="bottom(.5)">Your former spouse(s) or common-law partner(s) may:</p>
+            <ul data-c-margin="bottom(1)">
+                <li>have been cohabiting with you or not</li>
+                <li>be of any gender</li>
+            </ul>
+            <p data-c-margin="bottom(1)">The duration of the relationship is not taken into account.</p>
+            <div data-c-margin="bottom(double)">
+                <div data-c-border="all(thin, solid, gray)" data-c-background="gray(10)" data-c-radius="rounded" data-c-padding="normal" data-c-align="base(center)">
+                    <p>You haven't added any information yet.</p>
+                </div>
+            </div>
+            <div data-c-align="base(right)">
+                <button data-c-button="solid(c1)" data-c-radius="rounded" data-c-dialog-id="former-spouse-dialog" data-c-dialog-action="open" type="button">
+                    Add a Former Spouse / Common Law Partner
+                </button>
+            </div>
+        </div>
+    </div>
+</div>

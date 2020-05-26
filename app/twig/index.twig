@@ -5,7 +5,7 @@
     <head>
 
         {# Site Title #}
-        <title>Government of Canada: Reliability Demo Form</title>
+        <title>Talent Cloud: Security Screening Application and Consent Form Demo</title>
         
         {# Charset #}
         <meta charset="utf-8" />
@@ -56,26 +56,23 @@
 
         <header data-c-overlay="black(90)" data-c-padding="tb(3)" style="background-image: url('https://images.unsplash.com/photo-1545091154-2d7904ef24a3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80');">
             <div data-c-container="large">
-                <h1 data-c-margin="bottom(2)" data-c-heading="h1">Reliability Screening Application and Consent Form</h1>
-                <div data-c-color="white">
+                <h1 data-c-heading="h1">Security Screening Application and Consent Form Demo</h1>
+                <p data-c-margin="top(1)" data-c-color="white">Please note that this is a demo. This form is not functional and represents a potential digitized format.</p>
+                <div data-c-color="white" data-c-margin="top(2)">
                     <nav
                         aria-label="breadcrumb"
                         data-c-breadcrumbs>
                         <ol>
                             <li>
                                 <a
-                                    href="https://canada.ca"
-                                    title="This is the title of the page link.">
-                                    Canada.ca</a>
-                                <i>/</i>
-                                <a
-                                    href="https://canada.ca"
-                                    title="This is the title of the page link.">
-                                    Security Forms</a>
+                                    href="https://talent.canada.ca"
+                                    title="This is the title of the page link."
+                                    target="_blank">
+                                    Talent Cloud</a>
                                 <i>/</i>
                             </li>
                             <li>
-                                <span aria-current="page">Reliability Form</span>
+                                <span aria-current="page">Security Screening Application and Consent Form</span>
                                 <i>/</i>
                             </li>
                         </ol>
@@ -86,7 +83,7 @@
 
         <div class="gradient" data-c-padding="tb(1)">
             <div data-c-container="large" data-c-align="base(center)">
-                <p data-c-color="white">Looking for a different security clearance form? <a href="canada.ca" title="Learn about other types of security forms.">Discover more here</a>.</p>
+                <p data-c-color="white">Unsure which security form you should be completing? <a href="canada.ca" title="Learn about other types of security forms." target="_blank">Learn more here</a>.</p>
             </div>
         </div>
 
@@ -98,74 +95,155 @@
                             <span data-c-font-weight="bold" data-c-font-size="h4">On this page:</span>
                             <nav data-c-margin="top(normal)">
                                 <ul>
-                                    <li class="sidebar-complete">
+                                    <li class="sidebar-complete" id="navBegin">
+                                        <a href="#before" title="">Before You Begin</a>
+                                    </li>
+                                    <li class="sidebar-complete hidden" id="navConsent">
                                         <i class="material-icons">error</i>
                                         <i class="material-icons">warning</i>
                                         <i class="material-icons">check_circle</i>
                                         <a href="#consent" title="">Consent &amp; Verification</a>
                                     </li>
-                                    <li class="sidebar-incomplete">
+                                    <li class="sidebar-incomplete hidden" id="navBackground">
                                         <i class="material-icons">error</i>
                                         <i class="material-icons">warning</i>
                                         <i class="material-icons">check_circle</i>
                                         <a href="#background" title="">Background Information</a>
                                     </li>
-                                    <li class="sidebar-error">
+                                    <li class="sidebar-error hidden" id="navResidence">
                                         <i class="material-icons">error</i>
                                         <i class="material-icons">warning</i>
                                         <i class="material-icons">check_circle</i>
                                         <a href="#residence" title="">Residence</a>
                                     </li>
-                                    <li class="sidebar-incomplete">
+                                    <li class="sidebar-incomplete hidden" id="navExperience">
                                         <i class="material-icons">error</i>
                                         <i class="material-icons">warning</i>
                                         <i class="material-icons">check_circle</i>
                                         <a href="#experience" title="">Professional Background</a>
                                     </li>
-                                    <li class="sidebar-incomplete">
+                                    <li class="sidebar-incomplete hidden" id="navReferences">
                                         <i class="material-icons">error</i>
                                         <i class="material-icons">warning</i>
                                         <i class="material-icons">check_circle</i>
                                         <a href="#references" title="">Personal References</a>
                                     </li>
-                                    <li class="sidebar-incomplete">
+                                    <li class="sidebar-incomplete hidden" id="navEducation">
                                         <i class="material-icons">error</i>
                                         <i class="material-icons">warning</i>
                                         <i class="material-icons">check_circle</i>
-                                        <a href="#education" title="">Education &amp; Professional Designations</a>
+                                        <a href="#education" title="">Education &amp; Designations</a>
                                     </li>
-                                    <li class="sidebar-incomplete">
+                                    <li class="sidebar-incomplete hidden" id="navRecord">
                                         <i class="material-icons">error</i>
                                         <i class="material-icons">warning</i>
                                         <i class="material-icons">check_circle</i>
                                         <a href="#record" title="">Criminal Record</a>
                                     </li>
-                                    <li class="sidebar-incomplete">
+                                    <li class="sidebar-incomplete hidden" id="navProNot">
                                         <i class="material-icons">error</i>
                                         <i class="material-icons">warning</i>
                                         <i class="material-icons">check_circle</i>
-                                        <a href="#summary" title="">Summary</a>
+                                        <a href="#proNot" title="">Proactive Notification</a>
+                                    </li>
+                                    <li class="sidebar-incomplete hidden" id="navMaritalStatus">
+                                        <i class="material-icons">error</i>
+                                        <i class="material-icons">warning</i>
+                                        <i class="material-icons">check_circle</i>
+                                        <a href="#maritalStatus" title="">Marital Status</a>
+                                    </li>
+                                    <li class="sidebar-incomplete hidden" id="navRoommates">
+                                        <i class="material-icons">error</i>
+                                        <i class="material-icons">warning</i>
+                                        <i class="material-icons">check_circle</i>
+                                        <a href="#roommates" title="">Roommates / Cohabitants</a>
+                                    </li>
+                                    <li class="sidebar-incomplete hidden" id="navRelatives">
+                                        <i class="material-icons">error</i>
+                                        <i class="material-icons">warning</i>
+                                        <i class="material-icons">check_circle</i>
+                                        <a href="#relatives" title="">Immediate Relatives</a>
+                                    </li>
+                                    <li class="sidebar-complete hidden" id="navTravel">
+                                        <i class="material-icons">error</i>
+                                        <i class="material-icons">warning</i>
+                                        <i class="material-icons">check_circle</i>
+                                        <a href="#travel" title="">Foreign Travel</a>
+                                    </li>
+                                    <li class="sidebar-incomplete hidden" id="navPassports">
+                                        <i class="material-icons">error</i>
+                                        <i class="material-icons">warning</i>
+                                        <i class="material-icons">check_circle</i>
+                                        <a href="#passports" title="">Foreign Passports</a>
+                                    </li>
+                                    <li class="sidebar-incomplete hidden" id="navAssets">
+                                        <i class="material-icons">error</i>
+                                        <i class="material-icons">warning</i>
+                                        <i class="material-icons">check_circle</i>
+                                        <a href="#assets" title="">Foreign Assets</a>
+                                    </li>
+                                    <li class="sidebar-incomplete hidden" id="navSummary">
+                                        <i class="material-icons">error</i>
+                                        <i class="material-icons">warning</i>
+                                        <i class="material-icons">check_circle</i>
+                                        <a href="#summary" title="">Signature</a>
                                     </li>
                                 </ul>
                             </nav>
-                            <button data-c-margin="top(double)" data-c-button="solid(go)" type="button" data-c-radius="rounded">
-                                Save My Progress
+                            {# <button id="navStartTrigger" data-c-margin="top(double)" data-c-button="solid(c1)" type="button" data-c-radius="rounded">
+                                Upload &amp; Continue
+                            </button> #}
+                            <button id="navSaveTrigger" class="hidden" data-c-margin="top(double)" data-c-button="outline(go)" type="button" data-c-radius="rounded">
+                                Save &amp; Download
                             </button>
                         </div>
                     </div>
                     <div data-c-grid-item="tl(3of4) ds(4of5)" class="sidebar-content">
-                        <form data-c-grid="gutter(all, 1)">
-                            <div data-c-grid-item="base(1of1)">
-                                <p data-c-margin="top(triple)">Before you begin the clearance form, please review the information provided in the "Consent Documentation &amp; Details" section. This information describes the type of inquiries and assessments you agree to allow the Government of Canada perform in order to process your security clearance. The Government of Canada uses this form to collect personal information so that it can conduct security screening verifications, inquiries and assessments.</p>
+                        <form>
+                            {% include "templates/00-upload.twig" %}
+                            <div data-gc-form-type class="hidden">
+                                <h2 id="before" data-c-margin="top(3) bottom(1)" data-c-heading="h2" data-c-padding="bottom(1)">
+                                    Security Screening/Clearance Selection
+                                </h2>
+                                <div id="selection" data-c-input="radio">
+                                    <label for="clearanceType">I'm applying for:</label>
+                                    <span>Required</span>
+                                    <div id="clearanceType" role="radiogroup">
+                                        <label for="clearanceTypeReliability">
+                                            <input id="clearanceTypeReliability" required name="clearanceType" type="radio" data-gc-status-reliability-trigger/>
+                                            <span>Reliability Status</span>
+                                        </label>
+                                        <label for="clearanceTypeEnhanced">
+                                            <input id="clearanceTypeEnhanced" required name="clearanceType" type="radio" data-gc-status-enhanced-trigger/>
+                                            <span>Enhanced Reliability Status</span>
+                                        </label>
+                                        <label for="clearanceTypeSecret">
+                                            <input id="clearanceTypeSecret" required name="clearanceType" type="radio" data-gc-status-secret-trigger/>
+                                            <span>Secret Security Clearance</span>
+                                        </label>
+                                        <label for="clearanceTypeTop">
+                                            <input id="clearanceTypeTop" required name="clearanceType" type="radio" data-gc-status-top-secret-trigger/>
+                                            <span>Top Secret Security Clearance</span>
+                                        </label>
+                                    </div>
+                                    <span>This input has an error.</span>
+                                </div>
                             </div>
-                            {% include "templates/consent.twig" %}
-                            {% include "templates/background-info.twig" %}
-                            {% include "templates/residence.twig" %}
-                            {% include "templates/experience.twig" %}
-                            {% include "templates/references.twig" %}
-                            {% include "templates/education.twig" %}
-                            {% include "templates/records.twig" %}
-                            {% include "templates/summary.twig" %}
+                            {% include "templates/01-consent.twig" %}
+                            {% include "templates/02-background-info.twig" %}
+                            {% include "templates/03-residence.twig" %}
+                            {% include "templates/04-experience.twig" %}
+                            {% include "templates/05-references.twig" %}
+                            {% include "templates/06-education.twig" %}
+                            {% include "templates/07-records.twig" %}
+                            {% include "templates/08-notification.twig" %}
+                            {% include "templates/09-marital-status.twig" %}
+                            {% include "templates/10-cohabitants.twig" %}
+                            {% include "templates/11-relatives.twig" %}
+                            {% include "templates/12-foreign-travel.twig" %}
+                            {% include "templates/13-foreign-passports.twig" %}
+                            {% include "templates/14-foreign-assets.twig" %}
+                            {% include "templates/15-summary.twig" %}
                         </form>
                     </div>
                 </div>
@@ -207,7 +285,7 @@
                                     </a>
                                 </li>
                             </ul>
-                            <p data-c-colour="grey" data-c-font-size="small" data-c-margin="top(normal)">Date Modified: September 12, 2019</p>
+                            <p data-c-colour="grey" data-c-font-size="small" data-c-margin="top(normal)">Date Modified: May 25, 2020</p>
                         </nav>
                     </div>
                     <div data-c-alignment="tp(right)" data-c-grid-item="tp(2of7)">
@@ -219,8 +297,8 @@
             </div>
         </footer>
 
-        <div data-c-dialog-overlay></div>
-
+        <div data-c-dialog-overlay="active"></div>
+        {% include "templates/dialogs/welcome.twig" %}
         {% include "templates/dialogs/legal-name.twig" %}
         {% include "templates/dialogs/residence.twig" %}
         {% include "templates/dialogs/experience.twig" %}
@@ -228,6 +306,12 @@
         {% include "templates/dialogs/education.twig" %}
         {% include "templates/dialogs/recognition.twig" %}
         {% include "templates/dialogs/record.twig" %}
+        {% include "templates/dialogs/09-current-spouse.twig" %}
+        {% include "templates/dialogs/09-former-spouse.twig" %}
+        {% include "templates/dialogs/10-cohabitant.twig" %}
+        {% include "templates/dialogs/11-relative.twig" %}
+        {% include "templates/dialogs/12-travel.twig" %}
+        {% include "templates/dialogs/13-passport.twig" %}
 
         {# Clone's JavaScript #}
         <script src="$ROOT/js/clone/clone.min.js"></script>

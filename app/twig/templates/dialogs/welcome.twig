@@ -1,0 +1,63 @@
+<div
+    aria-hidden="false"
+    aria-describedby="welcome-dialog-description"
+    aria-labelledby="welcome-dialog-title"
+    data-c-dialog="active--contained"
+    data-c-dialog-id="welcome-dialog"
+    data-c-padding="top(double) bottom(double)"
+    role="dialog">
+    <div
+        data-c-background="white(100)"
+        data-c-radius="rounded"
+        data-c-margin="bottom(double)">
+        <div
+            data-c-padding="tb(normal) right(triple) left(normal)"
+            data-c-border="bottom(thin, solid, black)"
+            data-c-background="c1(100)">
+            <h5
+                data-c-font-size="h4"
+                id="welcome-dialog-title"
+                data-c-dialog-focus data-c-color="white">
+                Welcome to the Security Screening Application and Consent Form Demo
+            </h5>
+            <button
+                data-c-dialog-action="close"
+                data-c-dialog-id="welcome-dialog"
+                type="button">
+                <i class="material-icons" data-c-color="white">close</i>
+            </button>
+        </div>
+        <div
+            data-c-border="bottom(thin, solid, black)"
+            data-c-padding="normal">
+            <div id="welcome-dialog-description">
+                <p data-c-margin="bottom(1)">Thanks for taking a look at this digitized mockup of what a Government of Canada security screening application and consent form might look like.</p>
+                <p data-c-margin="bottom(1)">We'd like to note a few things before you get going:</p>
+                <ul data-c-margin="bottom(1)">
+                    <li>This form is not functional and cannot be completed, saved, or submitted.</li>
+                    <li>Forms inside of modals/dialogs will not save or update information in the form.</li>
+                    <li>All areas of the form have working decision trees and represent the real information that would be collected.</li>
+                    <li>The copywriting is subject to change and may not be accurate.</li>
+                    <li>Some areas of the form have been completed with fake information to give a visual representation of what they might look like when completed.</li>
+                </ul>
+                <p>If you have any questions or comments, please <a href="mailto:paul.krisciunas@tbs-sct.gc.ca" title="Email us with your feedback!">contact us via email</a>.</p>
+            </div>
+        </div>
+        <!-- The following dialog actions can be customized depending on the dialog. -->
+        <div data-c-padding="normal">
+            <div data-c-grid="gutter middle">
+                <div
+                    data-c-grid-item="base(1of1)"
+                    data-c-alignment="base(right)">
+                    <button
+                        data-c-button="solid(go)"
+                        data-c-radius="rounded"
+                        data-c-dialog-action="close"
+                        data-c-dialog-id="welcome-dialog">
+                        Get Started
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

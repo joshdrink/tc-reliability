@@ -1,0 +1,48 @@
+<div id="sectionAssets" class="hidden">
+    <div data-c-grid="gutter(all, 1)">
+        <div data-c-grid-item="base(1of1)">
+            <span id="assets"></span>
+            <h2 data-gc-section-status="incomplete" data-c-margin="top(3)" data-c-heading="h2" data-c-padding="bottom(1)">
+                <i class="material-icons">error</i>
+                <i class="material-icons">warning</i>
+                <i class="material-icons">check_circle</i>
+                Foreign Assets
+            </h2>
+        </div>
+        {# Asset Confirmation #}
+        <div data-c-input="radio" data-c-grid-item="base(1of1)">
+            <label for="assetConfirmation">Apart from stocks and mutual funds purchased in Canada from a regulated financial institution, do you have any business, financial or personal assets outside Canada?</label>
+            <span>Required</span>
+            <div id="assetConfirmation" role="radiogroup">
+                <label for="assetConfirmationYes" data-gc-assets-true-trigger>
+                    <input id="assetConfirmationYes" required name="assetConfirmation" type="radio" />
+                    <span>Yes</span>
+                </label>
+                <label for="assetConfirmationNo" data-gc-assets-false-trigger>
+                    <input id="assetConfirmationNo" required name="assetConfirmation" type="radio" />
+                    <span>No</span>
+                </label>
+            </div>
+            <span>This input has an error.</span>
+        </div>
+        {# Asset Country List #}
+        <div data-c-grid-item="base(1of1)" data-gc-assets-true class="hidden">
+            <p data-c-margin="bottom(normal)">Please list the relevant countries in which you have assets.</p>
+            <div data-gc-assets data-c-margin="bottom(double)">
+                <div data-c-input="textarea">
+                    <label for="TA2">I have assets in the following countries:</label>
+                    <span>Required</span>
+                    <div>
+                        <textarea id="TA2" required ></textarea>
+                    </div>
+                    <span>This input has an error.</span>
+                </div>
+            </div>
+            <div data-c-align="base(right)">
+                <button data-c-button="solid(c1)" data-c-radius="rounded" data-c-dialog-id="travel-dialog" data-c-dialog-action="open" type="button">
+                    Add a Travel Location
+                </button>
+            </div>
+        </div>
+    </div>
+</div>

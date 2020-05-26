@@ -1,0 +1,80 @@
+<div id="sectionPassports" class="hidden">
+    <div data-c-grid="gutter(all, 1)">
+        <div data-c-grid-item="base(1of1)">
+            <span id="passports"></span>
+            <h2 data-gc-section-status="incomplete" data-c-margin="top(3)" data-c-heading="h2" data-c-padding="bottom(1)">
+                <i class="material-icons">error</i>
+                <i class="material-icons">warning</i>
+                <i class="material-icons">check_circle</i>
+                Foreign Passports
+            </h2>
+        </div>
+        {# Own a Passport #}
+        <div data-c-input="radio" data-c-grid-item="base(1of1)">
+            <label for="currentPassport">Do you hold a non-Canadian passport?</label>
+            <span>Required</span>
+            <div id="currentPassport" role="radiogroup">
+                <label for="currentPassportYes" data-gc-passport-list-owned-true-trigger>
+                    <input id="currentPassportYes" required name="currentPassport" type="radio" />
+                    <span>Yes</span>
+                </label>
+                <label for="currentPassportNo" data-gc-passport-list-owned-false-trigger>
+                    <input id="currentPassportNo" required name="currentPassport" type="radio" />
+                    <span>No</span>
+                </label>
+            </div>
+            <span>This input has an error.</span>
+        </div>
+        {# Held a Passport #}
+        <div data-c-input="radio" data-c-grid-item="base(1of1)">
+            <label for="heldPassport">Have you previously held a non-Canadian passport?</label>
+            <span>Required</span>
+            <div id="heldPassport" role="radiogroup">
+                <label for="heldPassportYes" data-gc-passport-list-held-true-trigger>
+                    <input id="heldPassportYes" required name="heldPassport" type="radio" />
+                    <span>Yes</span>
+                </label>
+                <label for="heldPassportNo" data-gc-passport-list-held-false-trigger>
+                    <input id="heldPassportNo" required name="heldPassport" type="radio" />
+                    <span>No</span>
+                </label>
+            </div>
+            <span>This input has an error.</span>
+        </div>
+        {# Applied for Passport #}
+        <div data-c-input="radio" data-c-grid-item="base(1of1)">
+            <label for="appliedPassport">Have you ever applied for a non-Canadian passport?</label>
+            <span>Required</span>
+            <div id="appliedPassport" role="radiogroup">
+                <label for="appliedPassportYes" data-gc-passport-list-applied-true-trigger>
+                    <input id="appliedPassportYes" required name="appliedPassport" type="radio" />
+                    <span>Yes</span>
+                </label>
+                <label for="appliedPassportNo" data-gc-passport-list-applied-false-trigger>
+                    <input id="appliedPassportNo" required name="appliedPassport" type="radio" />
+                    <span>No</span>
+                </label>
+            </div>
+            <span>This input has an error.</span>
+        </div>
+        {# Passports #}
+        <div data-c-grid-item="base(1of1)" data-gc-passport-list class="hidden">
+            <p data-c-margin="bottom(normal)">List all the non-Canadian passports that you:</p>
+            <ul data-c-margin="bottom(2)">
+                <li>currently hold</li>
+                <li>have previously held</li>
+                <li>have previously applied for</li>
+            </ul>
+            <div data-c-margin="bottom(double)">
+                <div data-gc-residence-null data-c-border="all(thin, solid, gray)" data-c-background="gray(10)" data-c-radius="rounded" data-c-padding="normal" data-c-align="base(center)">
+                    <p>You haven't added any foreign passports yet.</p>
+                </div>
+            </div>
+            <div data-c-align="base(right)">
+                <button data-c-button="solid(c1)" data-c-radius="rounded" data-c-dialog-id="passport-dialog" data-c-dialog-action="open" type="button">
+                    Add a Foreign Passport
+                </button>
+            </div>
+        </div>
+    </div>
+</div>

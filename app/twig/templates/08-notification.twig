@@ -1,0 +1,47 @@
+<div id="sectionProNot" class="hidden">
+    <div data-c-grid="gutter(all, 1)">
+        <div data-c-grid-item="base(1of1)">
+            <span id="proNot"></span>
+            <h2 data-gc-section-status="incomplete" data-c-margin="top(3)" data-c-heading="h2" data-c-padding="bottom(1)">
+                <i class="material-icons">error</i>
+                <i class="material-icons">warning</i>
+                <i class="material-icons">check_circle</i>
+                Proactive Notification
+            </h2>
+        </div>
+        {# Notification Requirement #}
+        <div data-c-input="radio" data-c-grid-item="base(1of1)">
+            <label for="proNot">Are you currently under any legally issued prohibition that obliges you to abstain from specific actions or restricts you from possessing specific items?</label>
+            <span>Required</span>
+            <div id="proNot" role="radiogroup">
+                <label for="proNotYes" data-gc-notification-true-trigger>
+                    <input id="proNotYes" required name="proNot" type="radio" />
+                    <span>Yes</span>
+                </label>
+                <label for="proNotNo" data-gc-notification-false-trigger>
+                    <input id="proNotNo" required name="proNot" type="radio" />
+                    <span>No</span>
+                </label>
+            </div>
+            <span>This input has an error.</span>
+        </div>
+        {# Notification Details #}
+        <div data-c-grid-item="base(1of1)" data-gc-notification-true class="hidden">
+            <p data-c-margin="bottom(normal)">Provide details below. Examples of these details may include:</p>
+            <ul data-c-margin="bottom(1)">
+                <li>prohibitions against the use of firearms, drugs or alcohol</li>
+                <li>prohibitions against gambling, lobbying, driving or going to specific locations</li>
+                <li>prohibitions against employment or volunteer activities that involve minors or vulnerable persons</li>
+                <li>peace bonds or restraining orders</li>
+            </ul>
+            <div data-c-input="textarea">
+                <label for="proNotDetails">Details Regarding Prohibitions</label>
+                <span>Required</span>
+                <div>
+                    <textarea id="proNotDetails" required></textarea>
+                </div>
+                <span>This input has an error.</span>
+            </div>
+        </div>
+    </div>
+</div>

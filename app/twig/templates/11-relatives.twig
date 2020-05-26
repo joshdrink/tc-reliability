@@ -1,0 +1,36 @@
+<div id="sectionRelatives" class="hidden">
+    <div data-c-grid="gutter(all, 1)">
+        <div data-c-grid-item="base(1of1)">
+            <span id="relatives"></span>
+            <h2 data-gc-section-status="incomplete" data-c-margin="top(3) bottom(1)" data-c-heading="h2" data-c-padding="bottom(1)">
+                <i class="material-icons">error</i>
+                <i class="material-icons">warning</i>
+                <i class="material-icons">check_circle</i>
+                Immediate Relatives
+            </h2>
+            <p data-c-margin="bottom(normal)">Please identify all immediate relatives including:</p>
+            <ul data-c-margin="bottom(normal)">
+                <li>children 18 years of age and older with whom you and your spouse or common-law partner have a parental relationship</li>
+                <li>your father, mother and siblings</li>
+                <li>your current spouse or common-law partner’s father and mother </li>
+                <li>any “step” and “half” relatives that are considered in the above categories </li>
+            </ul>
+            <p data-c-margin="bottom(normal)">If any person is deceased, include their date of death and last known address. Ensure that you provide the legal names of all immediate relatives. Do not use initials.</p>
+            <p>If you have declared an immediate relative in the “Roommates or cohabitants” section, there is no need to repeat their information in this section. </p>
+        </div>
+        {# Relatives #}
+        <div data-c-grid-item="base(1of1)" data-gc-relatives-true>
+            <p data-c-margin="bottom(normal)">Please provide details for each immediate relative below. You can add an immediate relative by clicking the button and completing the form.</p>
+            <div data-gc-residence data-c-margin="bottom(double)">
+                <div data-gc-residence-null data-c-border="all(thin, solid, gray)" data-c-background="gray(10)" data-c-radius="rounded" data-c-padding="normal" data-c-align="base(center)">
+                    <p>You haven't added any information yet.</p>
+                </div>
+            </div>
+            <div data-c-align="base(right)">
+                <button data-c-button="solid(c1)" data-c-radius="rounded" data-c-dialog-id="relative-dialog" data-c-dialog-action="open" type="button">
+                    Add an Immediate Relative
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
